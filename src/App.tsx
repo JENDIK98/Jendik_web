@@ -338,11 +338,7 @@ function App() {
               <div className="space-y-6">
                 <div className="flex items-center p-4 rounded-xl bg-slate-800/30 border border-white/10">
                   <Mail className="text-cyan-400 mr-4" size={24} />
-                  <span className="text-white/80">jendik@email.com</span>
-                </div>
-                <div className="flex items-center p-4 rounded-xl bg-slate-800/30 border border-white/10">
-                  <Phone className="text-purple-400 mr-4" size={24} />
-                  <span className="text-white/80">+420 123 456 789</span>
+                  <span className="text-white/80">jan.stanek.spoluprace@gmail.com</span>
                 </div>
                 <div className="flex items-center p-4 rounded-xl bg-slate-800/30 border border-white/10">
                   <MapPin className="text-pink-400 mr-4" size={24} />
@@ -355,7 +351,7 @@ function App() {
                 <div className="p-4 rounded-xl bg-slate-800/30 border border-purple-500/20">
                   <div className="flex items-center text-white/80">
                     <div className="w-3 h-3 rounded-full mr-4 bg-gradient-to-r from-purple-400 to-pink-400"></div>
-                    <span className="font-medium">Zviditelnění značky pomocí vtipné parodie</span>
+                    <span className="font-medium">Kreativní marketing prostřednictvím hudebních parodií a autorského obsahu</span>
                   </div>
                 </div>
               </div>
@@ -379,7 +375,7 @@ function App() {
               <div>
                 <select className="w-full px-6 py-4 bg-slate-800/30 border border-white/20 rounded-xl text-white focus:border-cyan-400 focus:ring-0 transition-colors">
                   <option>Typ spolupráce</option>
-                  <option>Parodie pro zviditelnění značky</option>
+                  <option>Kreativní marketing prostřednictvím hudebních parodií</option>
                 </select>
               </div>
               <div>
