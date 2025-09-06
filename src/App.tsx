@@ -4,6 +4,14 @@ import { Instagram, Youtube, Twitter, Linkedin, Mail, Phone, MapPin, Users, Eye,
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    collaborationType: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -38,6 +46,47 @@ function App() {
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: 'smooth' });
     setIsMenuOpen(false);
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          collaborationType: '',
+          message: ''
+        });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -357,10 +406,24 @@ function App() {
               </div>
             </div>
             
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              {submitStatus === 'success' && (
+                <div className="p-4 rounded-xl bg-green-500/20 border border-green-500/30 text-green-400 text-center">
+                  Zpráva byla úspěšně odeslána! Ozvu se ti co nejdříve.
+                </div>
+              )}
+              {submitStatus === 'error' && (
+                <div className="p-4 rounded-xl bg-red-500/20 border border-red-500/30 text-red-400 text-center">
+                  Něco se pokazilo. Zkus to prosím znovu nebo mi napiš přímo na email.
+                </div>
+              )}
               <div>
                 <input
                   type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  required
                   className="w-full px-6 py-4 bg-slate-800/30 border border-white/20 rounded-xl text-white placeholder-white/50 focus:border-cyan-400 focus:ring-0 transition-colors"
                   placeholder="Jméno"
                 />
@@ -368,28 +431,44 @@ function App() {
               <div>
                 <input
                   type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
                   className="w-full px-6 py-4 bg-slate-800/30 border border-white/20 rounded-xl text-white placeholder-white/50 focus:border-cyan-400 focus:ring-0 transition-colors"
                   placeholder="Email"
                 />
               </div>
               <div>
-                <select className="w-full px-6 py-4 bg-slate-800/30 border border-white/20 rounded-xl text-white focus:border-cyan-400 focus:ring-0 transition-colors">
-                  <option>Typ spolupráce</option>
-                  <option>Kreativní marketing prostřednictvím hudebních parodií</option>
+                <select 
+                  name="collaborationType"
+                  value={formData.collaborationType}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-6 py-4 bg-slate-800/30 border border-white/20 rounded-xl text-white focus:border-cyan-400 focus:ring-0 transition-colors"
+                >
+                  <option value="">Typ spolupráce</option>
+                  <option value="marketing">Kreativní marketing prostřednictvím hudebních parodií</option>
+                  <option value="custom">Vlastní nápad na spolupráci</option>
                 </select>
               </div>
               <div>
                 <textarea
                   rows={4}
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  required
                   className="w-full px-6 py-4 bg-slate-800/30 border border-white/20 rounded-xl text-white placeholder-white/50 focus:border-cyan-400 focus:ring-0 resize-none transition-colors"
                   placeholder="Zpráva - popište svůj nápad nebo projekt"
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white py-4 rounded-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+                disabled={isSubmitting}
+                className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 disabled:opacity-50 disabled:cursor-not-allowed text-white py-4 rounded-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
               >
-                Odeslat zprávu
+                {isSubmitting ? 'Odesílám...' : 'Odeslat zprávu'}
               </button>
             </form>
           </div>
