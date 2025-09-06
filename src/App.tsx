@@ -213,53 +213,6 @@ function App() {
         </div>
       </section>
 
-      {/* Social Media Section - Futuristic Style */}
-      <section className="py-24 relative">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-6">
-              Najdeš mě všude
-            </h2>
-            <p className="text-xl text-white/70 font-light">
-              Sleduj mou tvorbu na všech platformách
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {socialStats.map((social, index) => (
-              <a
-                href={
-                  social.platform === 'Instagram' ? 'https://www.instagram.com/jan_stanek_98/?hl=cs' :
-                  social.platform === 'YouTube' ? 'https://www.youtube.com/@jan_stanek_98' :
-                  social.platform === 'TikTok' ? 'https://www.tiktok.com/@jendik98' : '#'
-                }
-                target="_blank"
-                rel="noopener noreferrer"
-                key={index}
-                className="group relative p-8 rounded-2xl bg-slate-800/30 border border-white/10 hover:border-white/30 transition-all duration-500 cursor-pointer overflow-hidden"
-              >
-                <div className={`absolute inset-0 bg-gradient-to-br ${social.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
-                <div className="relative z-10">
-                  <div className="mb-6 flex justify-center">
-                    <div className={`p-4 rounded-full bg-gradient-to-br ${social.gradient} group-hover:scale-110 transition-transform duration-300`}>
-                      <social.icon className="text-white" size={32} />
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{social.platform}</h3>
-                  <p className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-4">
-                    {social.followers} Sledujících
-                  </p>
-                  <div className="text-white/60 font-medium opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-center">
-                    Sledovat
-                    <ExternalLink className="ml-2" size={16} />
-                  </div>
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* About Section - Futuristic Style */}
       <section id="about" className="py-24 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/50 to-purple-900/50"></div>
@@ -364,6 +317,53 @@ function App() {
                   </button>
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Social Media Section - Futuristic Style */}
+      <section className="py-24 relative">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-6">
+              Najdeš mě všude
+            </h2>
+            <p className="text-xl text-white/70 font-light">
+              Sleduj mou tvorbu na všech platformách
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {socialStats.map((social, index) => (
+              <a
+                href={
+                  social.platform === 'Instagram' ? 'https://www.instagram.com/jan_stanek_98/?hl=cs' :
+                  social.platform === 'YouTube' ? 'https://www.youtube.com/@jan_stanek_98' :
+                  social.platform === 'TikTok' ? 'https://www.tiktok.com/@jendik98' : '#'
+                }
+                target="_blank"
+                rel="noopener noreferrer"
+                key={index}
+                className="group relative p-8 rounded-2xl bg-slate-800/30 border border-white/10 hover:border-white/30 transition-all duration-500 cursor-pointer overflow-hidden"
+              >
+                <div className={`absolute inset-0 bg-gradient-to-br ${social.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
+                <div className="relative z-10">
+                  <div className="mb-6 flex justify-center">
+                    <div className={`p-4 rounded-full bg-gradient-to-br ${social.gradient} group-hover:scale-110 transition-transform duration-300`}>
+                      <social.icon className="text-white" size={32} />
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3">{social.platform}</h3>
+                  <p className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-4">
+                    {social.followers} Sledujících
+                  </p>
+                  <div className="text-white/60 font-medium opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-center">
+                    Sledovat
+                    <ExternalLink className="ml-2" size={16} />
+                  </div>
+                </div>
+              </a>
             ))}
           </div>
         </div>
