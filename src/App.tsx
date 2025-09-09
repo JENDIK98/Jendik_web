@@ -56,37 +56,11 @@ function App() {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
-
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        setSubmitStatus('success');
-        setFormData({
-          name: '',
-          email: '',
-          collaborationType: '',
-          message: ''
-        });
-      } else {
-        setSubmitStatus('error');
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-    }
+    const subject = `Spolupráce: ${formData.collaborationType}`;
+    const body = `Jméno: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0ATyp spolupráce: ${formData.collaborationType}%0D%0A%0D%0AZpráva:%0D%0A${formData.message}`;
+    window.location.href = `mailto:jan.stanek.spoluprace@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
   };
 
   return (
@@ -407,16 +381,6 @@ function App() {
             </div>
             
             <form onSubmit={handleSubmit} className="space-y-6">
-              {submitStatus === 'success' && (
-                <div className="p-4 rounded-xl bg-green-500/20 border border-green-500/30 text-green-400 text-center">
-                  Zpráva byla úspěšně odeslána! Ozvu se ti co nejdříve.
-                </div>
-              )}
-              {submitStatus === 'error' && (
-                <div className="p-4 rounded-xl bg-red-500/20 border border-red-500/30 text-red-400 text-center">
-                  Něco se pokazilo. Zkus to prosím znovu nebo mi napiš přímo na email.
-                </div>
-              )}
               <div>
                 <input
                   type="text"
@@ -465,10 +429,9 @@ function App() {
               </div>
               <button
                 type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 disabled:opacity-50 disabled:cursor-not-allowed text-white py-4 rounded-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+                className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white py-4 rounded-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
               >
-                {isSubmitting ? 'Odesílám...' : 'Odeslat zprávu'}
+                Odeslat zprávu
               </button>
             </form>
           </div>
