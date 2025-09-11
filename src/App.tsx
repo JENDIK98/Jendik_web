@@ -31,6 +31,7 @@ function App() {
       description: "Vtipné přepracování současných hitů s nečekanými zvraty a chytrými rýmy, které baví tisíce posluchačů.",
       metrics: "500K+ přehrání • 15K sdílení",
       image: "https://images.pexels.com/photos/3756766/pexels-photo-3756766.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      videoUrl: "https://www.youtube.com/embed/VIDEO_ID_1", // Sem dej ID svého YouTube videa
       type: "music"
     },
     {
@@ -38,6 +39,7 @@ function App() {
       description: "Vtipné básně na jména, klasické básně.",
       metrics: "200K+ zhlédnutí • 8K komentářů",
       image: "https://images.pexels.com/photos/1370295/pexels-photo-1370295.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      videoUrl: "https://www.youtube.com/embed/VIDEO_ID_2", // Sem dej ID svého YouTube videa
       type: "poetry"
     },
   ];
@@ -260,14 +262,28 @@ function App() {
                 }`}
               >
                 <div className={`relative ${index % 2 === 1 ? 'md:col-start-2' : ''}`}>
-                  <div className="aspect-[9/16] max-w-sm mx-auto rounded-2xl overflow-hidden border border-white/20 group">
-                    <img 
-                      src={item.image}
-                      alt={item.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <Play className="text-white w-16 h-16" />
+                  <div className="aspect-[9/16] max-w-sm mx-auto rounded-2xl overflow-hidden border border-white/20 group cursor-pointer">
+                    {item.videoUrl ? (
+                      <iframe
+                        src={item.videoUrl}
+                        title={item.title}
+                        className="w-full h-full"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    ) : (
+                      <>
+                        <img 
+                          src={item.image}
+                          alt={item.title}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                          <Play className="text-white w-16 h-16" />
+                        </div>
+                      </>
+                    )}
                     </div>
                   </div>
                   <div className="absolute -top-4 -right-4">
