@@ -285,11 +285,11 @@ function App() {
                       </>
                     )}
                     </div>
-                  </div>
-                  <div className="absolute -top-4 -right-4">
-                    {item.type === 'music' && <Music className="text-purple-400 w-8 h-8" />}
-                    {item.type === 'poetry' && <BookOpen className="text-cyan-400 w-8 h-8" />}
-                    {item.type === 'rap' && <Mic className="text-pink-400 w-8 h-8" />}
+                    <div className="absolute -top-4 -right-4">
+                      {item.type === 'music' && <Music className="text-purple-400 w-8 h-8" />}
+                      {item.type === 'poetry' && <BookOpen className="text-cyan-400 w-8 h-8" />}
+                      {item.type === 'rap' && <Mic className="text-pink-400 w-8 h-8" />}
+                    </div>
                   </div>
                 </div>
                 <div className={index % 2 === 1 ? 'md:col-start-1' : ''}>
