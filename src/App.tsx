@@ -290,7 +290,6 @@ function App() {
                       {item.type === 'poetry' && <BookOpen className="text-cyan-400 w-8 h-8" />}
                       {item.type === 'rap' && <Mic className="text-pink-400 w-8 h-8" />}
                     </div>
-                  </div>
                 </div>
                 <div className={index % 2 === 1 ? 'md:col-start-1' : ''}>
                   <h3 className="text-3xl font-bold text-white mb-4">{item.title}</h3>
