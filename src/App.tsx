@@ -129,6 +129,15 @@ function App() {
         </div>
 
         <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
+          {/* JENDIK Title - Desktop Only */}
+          <div className="hidden md:flex items-center justify-center gap-4 mb-8">
+            <span className="text-cyan-400 text-6xl">∞</span>
+            <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              JENDIK
+            </h1>
+            <span className="text-cyan-400 text-6xl">∞</span>
+          </div>
+          
           <div className="flex flex-row items-center justify-center gap-4 mb-8 sm:mb-12">
             <div className="flex items-center gap-2 bg-slate-800/50 px-4 py-2 rounded-full border border-cyan-500/30">
               <BookOpen className="text-cyan-400" size={20} />
