@@ -466,7 +466,7 @@ function App() {
                 {['O mně', 'Tvorba', 'Kontakt'].map((item) => (
                   <button
                     key={item}
-                    className="block text-white/60 hover:text-white transition-colors font-light text-sm md:text-base"
+                    className="block w-full text-center text-white/60 hover:text-white transition-colors font-light text-sm md:text-base"
                   >
                     {item}
                   </button>
