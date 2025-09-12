@@ -31,7 +31,7 @@ function App() {
       description: "Vtipné přepracování současných hitů s nečekanými zvraty a chytrými rýmy, které baví tisíce posluchačů.",
       metrics: "500K+ přehrání • 15K sdílení",
       image: "https://images.pexels.com/photos/3756766/pexels-photo-3756766.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      videoUrl: "https://www.instagram.com/reel/DIQLr9_NrJ5/embed",
+      videoUrl: "https://www.instagram.com/p/DIQLr9_NrJ5/embed/",
       type: "music"
     },
     {
@@ -302,10 +302,15 @@ function App() {
                     {item.metrics}
                   </div>
                   <div className="flex justify-center md:justify-start">
-                    <button className="group bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-6 py-3 rounded-full font-bold transition-all duration-300 flex items-center gap-2">
-                    Poslechnout
-                    <Play size={16} className="group-hover:translate-x-1 transition-transform" />
-                  </button>
+                    <a 
+                      href="https://www.instagram.com/reel/DIQLr9_NrJ5/?hl=cs"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-6 py-3 rounded-full font-bold transition-all duration-300 flex items-center gap-2"
+                    >
+                      Poslechnout na Instagramu
+                      <ExternalLink size={16} className="group-hover:translate-x-1 transition-transform" />
+                    </a>
                   </div>
                 </div>
               </div>
