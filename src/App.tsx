@@ -204,15 +204,15 @@ function App() {
               
               <div className="grid grid-cols-3 gap-4 md:gap-8 mt-8 md:mt-12">
                 <div className="text-center p-6 rounded-xl bg-slate-800/30 border border-cyan-500/20">
-                  <div className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2">50+</div>
+                  <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2">50+</div>
                   <div className="text-sm text-white/60 font-medium">Básní</div>
                 </div>
                 <div className="text-center p-6 rounded-xl bg-slate-800/30 border border-purple-500/20">
-                  <div className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">20+</div>
+                  <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">20+</div>
                   <div className="text-sm text-white/60 font-medium">Parodií</div>
                 </div>
                 <div className="text-center p-6 rounded-xl bg-slate-800/30 border border-pink-500/20">
-                  <div className="text-3xl font-bold bg-gradient-to-r from-pink-400 to-red-400 bg-clip-text text-transparent mb-2">70K</div>
+                  <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-pink-400 to-red-400 bg-clip-text text-transparent mb-2">70K</div>
                   <div className="text-sm text-white/60 font-medium">Followerů</div>
                 </div>
               </div>
