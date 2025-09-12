@@ -232,7 +232,7 @@ function App() {
               <div className="aspect-square rounded-2xl overflow-hidden border-4 border-gradient-to-r from-cyan-400 to-purple-400 p-1 max-w-md mx-auto">
                 <div className="w-full h-full rounded-xl overflow-hidden">
                   <img 
-                    src="./IMG_3425.JPG"
+                    src="/IMG_3425.JPG"
                     alt="JENDIK Profile"
                     className="w-full h-full object-cover"
                   />
