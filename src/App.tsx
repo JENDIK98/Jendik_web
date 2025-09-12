@@ -129,14 +129,6 @@ function App() {
         </div>
 
         <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
-          <div className="flex items-center justify-center gap-4 mb-8">
-            <span className="text-cyan-400 text-6xl">∞</span>
-            <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              JENDIK
-            </h1>
-            <span className="text-cyan-400 text-6xl">∞</span>
-          </div>
-          
           <div className="flex flex-row items-center justify-center gap-4 mb-8 sm:mb-12">
             <div className="flex items-center gap-2 bg-slate-800/50 px-4 py-2 rounded-full border border-cyan-500/30">
               <BookOpen className="text-cyan-400" size={20} />
@@ -156,9 +148,9 @@ function App() {
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12 sm:mb-20 px-4">
             <button 
               onClick={() => scrollToSection('contact')}
-              className="w-full sm:w-auto group relative bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+              className="w-full sm:w-auto group relative bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center"
             >
-              <span className="flex items-center gap-2">
+              <span className="flex items-center justify-center gap-2">
                 <Users size={20} />
                 Spolupráce
               </span>
