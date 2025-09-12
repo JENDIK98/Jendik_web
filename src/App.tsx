@@ -465,8 +465,7 @@ function App() {
                 JENDIK
               </div>
               <p className="text-white/60 font-light leading-relaxed text-sm md:text-base">
-              <p className="text-lg md:text-xl text-white/70 font-light">
-                který baví a inspiruje tisíce lidí každý den.
+              Básník a parodista, který baví a inspiruje tisíce lidí každý den.
               </p>
             </div>
             <div>
