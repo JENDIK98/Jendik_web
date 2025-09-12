@@ -31,7 +31,8 @@ function App() {
       description: "Vtipné přepracování současných hitů s nečekanými zvraty a chytrými rýmy, které baví tisíce posluchačů.",
       metrics: "500K+ přehrání • 15K sdílení",
       image: "https://images.pexels.com/photos/3756766/pexels-photo-3756766.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      videoUrl: "https://www.instagram.com/p/DIQLr9_NrJ5/embed/",
+      videoUrl: null,
+      instagramUrl: "https://www.instagram.com/reel/DIQLr9_NrJ5/?hl=cs",
       type: "music"
     },
     {
@@ -264,15 +265,25 @@ function App() {
               >
                 <div className={`relative ${index % 2 === 1 ? 'md:col-start-2' : ''}`}>
                   <div className="aspect-[9/16] max-w-xs sm:max-w-sm mx-auto rounded-2xl overflow-hidden border border-white/20 group cursor-pointer">
-                    {item.videoUrl ? (
-                      <iframe
-                        src={item.videoUrl}
-                        title={item.title}
-                        className="w-full h-full"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                      />
+                    {item.instagramUrl && index === 0 ? (
+                      <div className="relative w-full h-full bg-gradient-to-br from-purple-900 to-pink-900 flex items-center justify-center">
+                        <div className="text-center p-8">
+                          <div className="w-20 h-20 mx-auto mb-4 bg-white/10 rounded-full flex items-center justify-center">
+                            <Play className="text-white w-10 h-10 ml-1" />
+                          </div>
+                          <h4 className="text-white font-bold mb-2">Video Preview</h4>
+                          <p className="text-white/70 text-sm mb-4">Klikni pro přehrání na Instagramu</p>
+                          <a 
+                            href={item.instagramUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:scale-105 transition-transform"
+                          >
+                            <Instagram size={16} />
+                            Přehrát video
+                          </a>
+                        </div>
+                      </div>
                     ) : (
                       <>
                         <img 
