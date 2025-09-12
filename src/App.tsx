@@ -37,7 +37,7 @@ function App() {
     },
     {
       title: "Česká reprezentace - báseň",
-      description: "Energická rapová báseň o životě reprezentanta třídy s vtipnými rýmy a chytrými narážkami.",
+      description: "Báseň o české reprezentaci na MS v hokeji 2024.",
       metrics: "200K+ zhlédnutí • 8K komentářů",
       image: "https://images.pexels.com/photos/1370295/pexels-photo-1370295.jpeg?auto=compress&cs=tinysrgb&w=1200",
       videoUrl: "/videos/repre.mp4",
