@@ -27,20 +27,20 @@ function App() {
 
   const portfolioItems = [
     {
-      title: "Parodie na populární hity",
-      description: "Vtipné přepracování současných hitů s nečekanými zvraty a chytrými rýmy, které baví tisíce posluchačů.",
+      title: "Rozvrh - Hudební parodie",
+      description: "Vtipná parodie na téma školního rozvrhu, která pobavila tisíce studentů a učitelů.",
       metrics: "500K+ přehrání • 15K sdílení",
       image: "https://images.pexels.com/photos/3756766/pexels-photo-3756766.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      videoUrl: null,
-      instagramUrl: "https://www.instagram.com/reel/DIQLr9_NrJ5/?hl=cs",
+      videoUrl: "/videos/rozvrh.mp4",
+      instagramUrl: null,
       type: "music"
     },
     {
-      title: "Básně s hloubkou i bez hloubky",
-      description: "Vtipné básně na jména, klasické básně.",
+      title: "Repre - Rapová báseň",
+      description: "Energická rapová báseň o životě reprezentanta třídy s vtipnými rýmy a chytrými narážkami.",
       metrics: "200K+ zhlédnutí • 8K komentářů",
       image: "https://images.pexels.com/photos/1370295/pexels-photo-1370295.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      videoUrl: "https://www.youtube.com/embed/VIDEO_ID_2", // Sem dej ID svého YouTube videa
+      videoUrl: "/videos/repre.mp4",
       type: "poetry"
     },
   ];
@@ -265,25 +265,16 @@ function App() {
               >
                 <div className={`relative ${index % 2 === 1 ? 'md:col-start-2' : ''}`}>
                   <div className="aspect-[9/16] max-w-xs sm:max-w-sm mx-auto rounded-2xl overflow-hidden border border-white/20 group cursor-pointer">
-                    {item.instagramUrl && index === 0 ? (
-                      <div className="relative w-full h-full bg-gradient-to-br from-purple-900 to-pink-900 flex items-center justify-center">
-                        <div className="text-center p-8">
-                          <div className="w-20 h-20 mx-auto mb-4 bg-white/10 rounded-full flex items-center justify-center">
-                            <Play className="text-white w-10 h-10 ml-1" />
-                          </div>
-                          <h4 className="text-white font-bold mb-2">Video Preview</h4>
-                          <p className="text-white/70 text-sm mb-4">Klikni pro přehrání na Instagramu</p>
-                          <a 
-                            href={item.instagramUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:scale-105 transition-transform"
-                          >
-                            <Instagram size={16} />
-                            Přehrát video
-                          </a>
-                        </div>
-                      </div>
+                    {item.videoUrl ? (
+                      <video 
+                        className="w-full h-full object-cover"
+                        controls
+                        preload="metadata"
+                        poster={item.image}
+                      >
+                        <source src={item.videoUrl} type="video/mp4" />
+                        Váš prohlížeč nepodporuje video tag.
+                      </video>
                     ) : (
                       <>
                         <img 
@@ -314,12 +305,12 @@ function App() {
                   </div>
                   <div className="flex justify-center md:justify-start">
                     <a 
-                      href="https://www.instagram.com/reel/DIQLr9_NrJ5/?hl=cs"
+                      href={item.instagramUrl || "https://www.instagram.com/jan_stanek_98/?hl=cs"}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="group bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-6 py-3 rounded-full font-bold transition-all duration-300 flex items-center gap-2"
                     >
-                      Poslechnout na Instagramu
+                      Více na Instagramu
                       <ExternalLink size={16} className="group-hover:translate-x-1 transition-transform" />
                     </a>
                   </div>
