@@ -31,7 +31,7 @@ function App() {
       description: "Vtipné přepracování současných hitů s nečekanými zvraty a chytrými rýmy, které baví tisíce posluchačů.",
       metrics: "500K+ přehrání • 15K sdílení",
       image: "https://images.pexels.com/photos/3756766/pexels-photo-3756766.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      videoUrl: "https://www.youtube.com/embed/VIDEO_ID_1", // Sem dej ID svého YouTube videa
+      videoUrl: "https://www.instagram.com/reel/DIQLr9_NrJ5/embed",
       type: "music"
     },
     {
