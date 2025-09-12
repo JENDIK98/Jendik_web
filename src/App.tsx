@@ -196,10 +196,10 @@ function App() {
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
             <div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-6 md:mb-8 text-center md:text-left">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-6">
                 O mně
               </h2>
-              <div className="space-y-4 md:space-y-6 text-base md:text-lg text-white/80 font-light leading-relaxed text-center">
+              <div className="space-y-4 md:space-y-6 text-base md:text-lg text-white/80 font-light leading-relaxed text-center md:text-left">
                 <p>
                   Jsem JENDIK a věnuji se tomu, co mě baví nejvíc - tvorbě básní a parodií na populární písničky. 
                   Začal jsem jako hobby, ale postupně se to stalo mou vášní a způsobem, jak bavit lidi.
@@ -293,15 +293,15 @@ function App() {
                     </div>
                 </div>
                 <div className={index % 2 === 1 ? 'md:col-start-1' : ''}>
-                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 text-center">{item.title}</h3>
-                  <p className="text-base md:text-lg text-white/70 font-light leading-relaxed mb-6 text-center px-4 md:px-0">
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 text-center md:text-left">{item.title}</h3>
+                  <p className="text-base md:text-lg text-white/70 font-light leading-relaxed mb-6 text-center md:text-left px-4 md:px-0">
                     {item.description}
                   </p>
-                  <div className="text-sm text-cyan-400 font-medium mb-6 flex items-center justify-center gap-2">
+                  <div className="text-sm text-cyan-400 font-medium mb-6 flex items-center justify-center md:justify-start gap-2">
                     <Eye size={16} />
                     {item.metrics}
                   </div>
-                  <div className="flex justify-center">
+                  <div className="flex justify-center md:justify-start">
                     <button className="group bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-6 py-3 rounded-full font-bold transition-all duration-300 flex items-center gap-2">
                     Poslechnout
                     <Play size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -321,7 +321,7 @@ function App() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-6">
               Najdeš mě všude
             </h2>
-            <p className="text-lg md:text-xl text-white/70 font-light px-4">
+            <p className="text-lg md:text-xl text-white/70 font-light">
               Sleduj mou tvorbu na všech platformách
             </p>
           </div>
@@ -368,7 +368,7 @@ function App() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-6">
               Pojďme tvořit
             </h2>
-            <p className="text-lg md:text-xl text-white/70 font-light px-4">
+            <p className="text-lg md:text-xl text-white/70 font-light">
               Máš nápad na spolupráci? Ozvi se!
             </p>
           </div>
@@ -465,7 +465,7 @@ function App() {
                 JENDIK
               </div>
               <p className="text-white/60 font-light leading-relaxed text-sm md:text-base">
-                Básník a parodista, který spojuje humor s poezií a vytváří obsah, 
+              <p className="text-lg md:text-xl text-white/70 font-light">
                 který baví a inspiruje tisíce lidí každý den.
               </p>
             </div>
@@ -475,7 +475,7 @@ function App() {
                 {['O mně', 'Tvorba', 'Kontakt'].map((item) => (
                   <button
                     key={item}
-                    className="block w-full text-center text-white/60 hover:text-white transition-colors font-light text-sm md:text-base"
+                    className="block w-full text-center md:text-left text-white/60 hover:text-white transition-colors font-light text-sm md:text-base"
                   >
                     {item}
                   </button>
