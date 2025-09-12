@@ -129,7 +129,7 @@ function App() {
         </div>
 
         <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
-          <div className="hidden md:flex items-center justify-center gap-4 mb-8">
+          <div className="flex items-center justify-center gap-4 mb-8">
             <span className="text-cyan-400 text-6xl">∞</span>
             <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               JENDIK
@@ -137,14 +137,7 @@ function App() {
             <span className="text-cyan-400 text-6xl">∞</span>
           </div>
           
-          {/* Mobile title - smaller and centered */}
-          <div className="md:hidden mb-8">
-            <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              JENDIK
-            </h1>
-          </div>
-          
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-8 sm:mb-12">
+          <div className="flex flex-row items-center justify-center gap-4 mb-8 sm:mb-12">
             <div className="flex items-center gap-2 bg-slate-800/50 px-4 py-2 rounded-full border border-cyan-500/30">
               <BookOpen className="text-cyan-400" size={20} />
               <span className="text-white font-medium">Básník</span>
@@ -155,7 +148,7 @@ function App() {
             </div>
           </div>
           
-          <p className="text-lg sm:text-xl md:text-2xl text-white/80 mb-12 sm:mb-16 font-light leading-relaxed max-w-4xl mx-auto px-4">
+          <p className="text-lg sm:text-xl md:text-2xl text-white/80 mb-12 sm:mb-16 font-light leading-relaxed max-w-4xl mx-auto px-4 text-center">
             Tvořím básně, které tě rozesmějí, a parodie písniček, které si budeš zpívat celý den. 
             Spojuji humor s poezií a hudbu s nečekanými zvraty.
           </p>
@@ -205,7 +198,7 @@ function App() {
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-6 md:mb-8 text-center md:text-left">
                 O mně
               </h2>
-              <div className="space-y-4 md:space-y-6 text-base md:text-lg text-white/80 font-light leading-relaxed text-center md:text-left">
+              <div className="space-y-4 md:space-y-6 text-base md:text-lg text-white/80 font-light leading-relaxed text-center">
                 <p>
                   Jsem JENDIK a věnuji se tomu, co mě baví nejvíc - tvorbě básní a parodií na populární písničky. 
                   Začal jsem jako hobby, ale postupně se to stalo mou vášní a způsobem, jak bavit lidi.
@@ -299,15 +292,15 @@ function App() {
                     </div>
                 </div>
                 <div className={index % 2 === 1 ? 'md:col-start-1' : ''}>
-                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 text-center md:text-left">{item.title}</h3>
-                  <p className="text-base md:text-lg text-white/70 font-light leading-relaxed mb-6 text-center md:text-left px-4 md:px-0">
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 text-center">{item.title}</h3>
+                  <p className="text-base md:text-lg text-white/70 font-light leading-relaxed mb-6 text-center px-4 md:px-0">
                     {item.description}
                   </p>
-                  <div className="text-sm text-cyan-400 font-medium mb-6 flex items-center justify-center md:justify-start gap-2">
+                  <div className="text-sm text-cyan-400 font-medium mb-6 flex items-center justify-center gap-2">
                     <Eye size={16} />
                     {item.metrics}
                   </div>
-                  <div className="flex justify-center md:justify-start">
+                  <div className="flex justify-center">
                     <button className="group bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-6 py-3 rounded-full font-bold transition-all duration-300 flex items-center gap-2">
                     Poslechnout
                     <Play size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -396,7 +389,7 @@ function App() {
               <div className="mt-8 md:mt-12">
                 <h4 className="text-base md:text-lg font-bold text-white mb-4 md:mb-6 text-center md:text-left">Typy spolupráce</h4>
                 <div className="p-4 rounded-xl bg-slate-800/30 border border-purple-500/20">
-                  <div className="flex items-start md:items-center text-white/80 text-sm md:text-base">
+                  <div className="flex items-start md:items-center text-white/80 text-sm md:text-base text-center md:text-left">
                     <div className="w-3 h-3 rounded-full mr-4 bg-gradient-to-r from-purple-400 to-pink-400"></div>
                     <span className="font-medium">Kreativní marketing prostřednictvím hudebních parodií a autorského obsahu</span>
                   </div>
