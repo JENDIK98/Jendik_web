@@ -129,7 +129,7 @@ function App() {
         </div>
 
         <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
-          <div className="flex items-center justify-center gap-4 mb-8">
+          <div className="hidden md:flex items-center justify-center gap-4 mb-8">
             <span className="text-cyan-400 text-6xl">∞</span>
             <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               JENDIK
@@ -137,7 +137,14 @@ function App() {
             <span className="text-cyan-400 text-6xl">∞</span>
           </div>
           
-          <div className="flex items-center justify-center gap-6 mb-8">
+          {/* Mobile title - smaller and centered */}
+          <div className="md:hidden mb-8">
+            <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              JENDIK
+            </h1>
+          </div>
+          
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-8 sm:mb-12">
             <div className="flex items-center gap-2 bg-slate-800/50 px-4 py-2 rounded-full border border-cyan-500/30">
               <BookOpen className="text-cyan-400" size={20} />
               <span className="text-white font-medium">Básník</span>
@@ -148,15 +155,15 @@ function App() {
             </div>
           </div>
           
-          <p className="text-xl md:text-2xl text-white/80 mb-12 font-light leading-relaxed max-w-4xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl text-white/80 mb-12 sm:mb-16 font-light leading-relaxed max-w-4xl mx-auto px-4">
             Tvořím básně, které tě rozesmějí, a parodie písniček, které si budeš zpívat celý den. 
             Spojuji humor s poezií a hudbu s nečekanými zvraty.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12 sm:mb-20 px-4">
             <button 
               onClick={() => scrollToSection('contact')}
-              className="group relative bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-8 py-4 rounded-full font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+              className="w-full sm:w-auto group relative bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
             >
               <span className="flex items-center gap-2">
                 <Users size={20} />
@@ -165,24 +172,24 @@ function App() {
             </button>
             <button 
               onClick={() => scrollToSection('portfolio')}
-              className="group text-white border-2 border-white/30 hover:border-white/60 px-8 py-4 rounded-full font-bold transition-all duration-300 hover:bg-white/10"
+              className="w-full sm:w-auto group text-white border-2 border-white/30 hover:border-white/60 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold transition-all duration-300 hover:bg-white/10"
             >
               Poslechnout si mě
             </button>
           </div>
           
           {/* Stats Section - Moved below buttons */}
-          <div className="grid md:grid-cols-3 gap-8 mt-16 max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-3xl mx-auto px-4">
             <div className="p-6 rounded-2xl bg-slate-800/30 border border-cyan-500/20">
-              <div className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2">70K+</div>
+              <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2">70K+</div>
               <div className="text-white/60 font-light text-sm">Celkové sledování</div>
             </div>
             <div className="p-6 rounded-2xl bg-slate-800/30 border border-purple-500/20">
-              <div className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">2M+</div>
+              <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">2M+</div>
               <div className="text-white/60 font-light text-sm">Přehrání</div>
             </div>
             <div className="p-6 rounded-2xl bg-slate-800/30 border border-pink-500/20">
-              <div className="text-4xl font-bold bg-gradient-to-r from-pink-400 to-red-400 bg-clip-text text-transparent mb-2">50+</div>
+              <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-pink-400 to-red-400 bg-clip-text text-transparent mb-2">50+</div>
               <div className="text-white/60 font-light text-sm">Vytvořených děl</div>
             </div>
           </div>
@@ -193,12 +200,12 @@ function App() {
       <section id="about" className="py-24 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/50 to-purple-900/50"></div>
         <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
             <div>
-              <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-8">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-6 md:mb-8 text-center md:text-left">
                 O mně
               </h2>
-              <div className="space-y-6 text-lg text-white/80 font-light leading-relaxed">
+              <div className="space-y-4 md:space-y-6 text-base md:text-lg text-white/80 font-light leading-relaxed text-center md:text-left">
                 <p>
                   Jsem JENDIK a věnuji se tomu, co mě baví nejvíc - tvorbě básní a parodií na populární písničky. 
                   Začal jsem jako hobby, ale postupně se to stalo mou vášní a způsobem, jak bavit lidi.
@@ -210,7 +217,7 @@ function App() {
                 </p>
               </div>
               
-              <div className="grid grid-cols-3 gap-8 mt-12">
+              <div className="grid grid-cols-3 gap-4 md:gap-8 mt-8 md:mt-12">
                 <div className="text-center p-6 rounded-xl bg-slate-800/30 border border-cyan-500/20">
                   <div className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2">50+</div>
                   <div className="text-sm text-white/60 font-medium">Básní</div>
@@ -227,7 +234,7 @@ function App() {
             </div>
             
             <div className="relative">
-              <div className="aspect-square rounded-2xl overflow-hidden border-4 border-gradient-to-r from-cyan-400 to-purple-400 p-1">
+              <div className="aspect-square rounded-2xl overflow-hidden border-4 border-gradient-to-r from-cyan-400 to-purple-400 p-1 max-w-md mx-auto">
                 <div className="w-full h-full rounded-xl overflow-hidden">
                   <img 
                     src="./IMG_3425.JPG"
@@ -245,10 +252,10 @@ function App() {
       <section id="portfolio" className="py-24 relative">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-6">
               Moje tvorba
             </h2>
-            <p className="text-xl text-white/70 font-light">
+            <p className="text-lg md:text-xl text-white/70 font-light px-4">
               Nejlepší básně, parodie a hudební projekty
             </p>
           </div>
@@ -262,7 +269,7 @@ function App() {
                 }`}
               >
                 <div className={`relative ${index % 2 === 1 ? 'md:col-start-2' : ''}`}>
-                  <div className="aspect-[9/16] max-w-sm mx-auto rounded-2xl overflow-hidden border border-white/20 group cursor-pointer">
+                  <div className="aspect-[9/16] max-w-xs sm:max-w-sm mx-auto rounded-2xl overflow-hidden border border-white/20 group cursor-pointer">
                     {item.videoUrl ? (
                       <iframe
                         src={item.videoUrl}
@@ -292,18 +299,20 @@ function App() {
                     </div>
                 </div>
                 <div className={index % 2 === 1 ? 'md:col-start-1' : ''}>
-                  <h3 className="text-3xl font-bold text-white mb-4">{item.title}</h3>
-                  <p className="text-lg text-white/70 font-light leading-relaxed mb-6">
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 text-center md:text-left">{item.title}</h3>
+                  <p className="text-base md:text-lg text-white/70 font-light leading-relaxed mb-6 text-center md:text-left px-4 md:px-0">
                     {item.description}
                   </p>
-                  <div className="text-sm text-cyan-400 font-medium mb-6 flex items-center gap-2">
+                  <div className="text-sm text-cyan-400 font-medium mb-6 flex items-center justify-center md:justify-start gap-2">
                     <Eye size={16} />
                     {item.metrics}
                   </div>
-                  <button className="group bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-6 py-3 rounded-full font-bold transition-all duration-300 flex items-center gap-2">
+                  <div className="flex justify-center md:justify-start">
+                    <button className="group bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-6 py-3 rounded-full font-bold transition-all duration-300 flex items-center gap-2">
                     Poslechnout
                     <Play size={16} className="group-hover:translate-x-1 transition-transform" />
                   </button>
+                  </div>
                 </div>
               </div>
             ))}
@@ -315,15 +324,15 @@ function App() {
       <section className="py-24 relative">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-6">
               Najdeš mě všude
             </h2>
-            <p className="text-xl text-white/70 font-light">
+            <p className="text-lg md:text-xl text-white/70 font-light px-4">
               Sleduj mou tvorbu na všech platformách
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
             {socialStats.map((social, index) => (
               <a
                 href={
@@ -334,7 +343,7 @@ function App() {
                 target="_blank"
                 rel="noopener noreferrer"
                 key={index}
-                className="group relative p-8 rounded-2xl bg-slate-800/30 border border-white/10 hover:border-white/30 transition-all duration-500 cursor-pointer overflow-hidden"
+                className="group relative p-6 md:p-8 rounded-2xl bg-slate-800/30 border border-white/10 hover:border-white/30 transition-all duration-500 cursor-pointer overflow-hidden"
               >
                 <div className={`absolute inset-0 bg-gradient-to-br ${social.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
                 <div className="relative z-10">
@@ -344,7 +353,7 @@ function App() {
                     </div>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{social.platform}</h3>
-                  <p className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-4">
+                  <p className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-4">
                     {social.followers} Sledujících
                   </p>
                   <div className="text-white/60 font-medium opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-center">
@@ -362,21 +371,21 @@ function App() {
       <section id="contact" className="py-24 relative">
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-6">
               Pojďme tvořit
             </h2>
-            <p className="text-xl text-white/70 font-light">
+            <p className="text-lg md:text-xl text-white/70 font-light px-4">
               Máš nápad na spolupráci? Ozvi se!
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-16">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-16">
             <div>
-              <h3 className="text-2xl font-bold text-white mb-8">Kontaktní informace</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-6 md:mb-8 text-center md:text-left">Kontaktní informace</h3>
               <div className="space-y-6">
                 <div className="flex items-center p-4 rounded-xl bg-slate-800/30 border border-white/10">
                   <Mail className="text-cyan-400 mr-4" size={24} />
-                  <span className="text-white/80">jan.stanek.spoluprace@gmail.com</span>
+                  <span className="text-white/80 text-sm md:text-base break-all">jan.stanek.spoluprace@gmail.com</span>
                 </div>
                 <div className="flex items-center p-4 rounded-xl bg-slate-800/30 border border-white/10">
                   <MapPin className="text-pink-400 mr-4" size={24} />
@@ -384,10 +393,10 @@ function App() {
                 </div>
               </div>
               
-              <div className="mt-12">
-                <h4 className="text-lg font-bold text-white mb-6">Typy spolupráce</h4>
+              <div className="mt-8 md:mt-12">
+                <h4 className="text-base md:text-lg font-bold text-white mb-4 md:mb-6 text-center md:text-left">Typy spolupráce</h4>
                 <div className="p-4 rounded-xl bg-slate-800/30 border border-purple-500/20">
-                  <div className="flex items-center text-white/80">
+                  <div className="flex items-start md:items-center text-white/80 text-sm md:text-base">
                     <div className="w-3 h-3 rounded-full mr-4 bg-gradient-to-r from-purple-400 to-pink-400"></div>
                     <span className="font-medium">Kreativní marketing prostřednictvím hudebních parodií a autorského obsahu</span>
                   </div>
@@ -403,7 +412,7 @@ function App() {
                   value={formData.name}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-6 py-4 bg-slate-800/30 border border-white/20 rounded-xl text-white placeholder-white/50 focus:border-cyan-400 focus:ring-0 transition-colors"
+                  className="w-full px-4 md:px-6 py-3 md:py-4 bg-slate-800/30 border border-white/20 rounded-xl text-white placeholder-white/50 focus:border-cyan-400 focus:ring-0 transition-colors text-sm md:text-base"
                   placeholder="Jméno"
                 />
               </div>
@@ -414,7 +423,7 @@ function App() {
                   value={formData.email}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-6 py-4 bg-slate-800/30 border border-white/20 rounded-xl text-white placeholder-white/50 focus:border-cyan-400 focus:ring-0 transition-colors"
+                  className="w-full px-4 md:px-6 py-3 md:py-4 bg-slate-800/30 border border-white/20 rounded-xl text-white placeholder-white/50 focus:border-cyan-400 focus:ring-0 transition-colors text-sm md:text-base"
                   placeholder="Email"
                 />
               </div>
@@ -424,7 +433,7 @@ function App() {
                   value={formData.collaborationType}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-6 py-4 bg-slate-800/30 border border-white/20 rounded-xl text-white focus:border-cyan-400 focus:ring-0 transition-colors"
+                  className="w-full px-4 md:px-6 py-3 md:py-4 bg-slate-800/30 border border-white/20 rounded-xl text-white focus:border-cyan-400 focus:ring-0 transition-colors text-sm md:text-base"
                 >
                   <option value="">Typ spolupráce</option>
                   <option value="marketing">Kreativní marketing prostřednictvím hudebních parodií</option>
@@ -438,13 +447,13 @@ function App() {
                   value={formData.message}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-6 py-4 bg-slate-800/30 border border-white/20 rounded-xl text-white placeholder-white/50 focus:border-cyan-400 focus:ring-0 resize-none transition-colors"
+                  className="w-full px-4 md:px-6 py-3 md:py-4 bg-slate-800/30 border border-white/20 rounded-xl text-white placeholder-white/50 focus:border-cyan-400 focus:ring-0 resize-none transition-colors text-sm md:text-base"
                   placeholder="Zpráva - popište svůj nápad nebo projekt"
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white py-4 rounded-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+                className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white py-3 md:py-4 rounded-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 text-sm md:text-base"
               >
                 Odeslat zprávu
               </button>
@@ -454,14 +463,14 @@ function App() {
       </section>
 
       {/* Footer - Futuristic Style */}
-      <footer className="bg-slate-900/50 py-16 border-t border-white/10">
+      <footer className="bg-slate-900/50 py-12 md:py-16 border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 text-center md:text-left">
             <div>
               <div className="text-3xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
                 JENDIK
               </div>
-              <p className="text-white/60 font-light leading-relaxed">
+              <p className="text-white/60 font-light leading-relaxed text-sm md:text-base">
                 Básník a parodista, který spojuje humor s poezií a vytváří obsah, 
                 který baví a inspiruje tisíce lidí každý den.
               </p>
@@ -472,7 +481,7 @@ function App() {
                 {['O mně', 'Tvorba', 'Kontakt'].map((item) => (
                   <button
                     key={item}
-                    className="block text-white/60 hover:text-white transition-colors font-light"
+                    className="block text-white/60 hover:text-white transition-colors font-light text-sm md:text-base"
                   >
                     {item}
                   </button>
@@ -481,7 +490,7 @@ function App() {
             </div>
             <div>
               <h4 className="font-bold text-white mb-4">Sociální sítě</h4>
-              <div className="flex space-x-4">
+              <div className="flex justify-center md:justify-start space-x-4">
                 {socialStats.map((social, index) => (
                   <a
                     key={index}
@@ -500,8 +509,8 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="border-t border-white/10 mt-12 pt-8 text-center">
-            <p className="text-white/40 font-light text-sm">
+          <div className="border-t border-white/10 mt-8 md:mt-12 pt-6 md:pt-8 text-center">
+            <p className="text-white/40 font-light text-xs md:text-sm">
               © 2024 JENDIK. Všechna práva vyhrazena. Vytvořeno s láskou k poezii a hudbě.
             </p>
           </div>
