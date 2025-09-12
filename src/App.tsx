@@ -337,11 +337,11 @@ function App() {
                       <social.icon className="text-white" size={32} />
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{social.platform}</h3>
-                  <p className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-4">
+                  <h3 className="text-xl font-bold text-white mb-3 text-center">{social.platform}</h3>
+                  <p className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-4 text-center">
                     {social.followers} Sledujících
                   </p>
-                  <div className="text-white/60 font-medium opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-center">
+                  <div className="text-white/60 font-medium opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                     Sledovat
                     <ExternalLink className="ml-2" size={16} />
                   </div>
