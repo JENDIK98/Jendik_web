@@ -4,14 +4,6 @@ import { Instagram, Youtube, Twitter, Linkedin, Mail, Phone, MapPin, Users, Eye,
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    collaborationType: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -49,21 +41,6 @@ function App() {
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: 'smooth' });
     setIsMenuOpen(false);
-  };
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const subject = `Spolupráce: ${formData.collaborationType}`;
-    const body = `Jméno: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0ATyp spolupráce: ${formData.collaborationType}%0D%0A%0D%0AZpráva:%0D%0A${formData.message}`;
-    window.location.href = `mailto:jan.stanek.spoluprace@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
   };
 
   return (
@@ -380,85 +357,30 @@ function App() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8 md:gap-16">
-            <div>
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-6 md:mb-8 text-center md:text-left">Kontaktní informace</h3>
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center">
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-8">Kontaktní informace</h3>
               <div className="space-y-6">
-                <div className="flex items-center p-4 rounded-xl bg-slate-800/30 border border-white/10">
+                <div className="flex items-center justify-center p-6 rounded-xl bg-slate-800/30 border border-white/10">
                   <Mail className="text-cyan-400 mr-4" size={24} />
                   <span className="text-white/80 text-sm md:text-base break-all">jan.stanek.spoluprace@gmail.com</span>
                 </div>
-                <div className="flex items-center p-4 rounded-xl bg-slate-800/30 border border-white/10">
+                <div className="flex items-center justify-center p-6 rounded-xl bg-slate-800/30 border border-white/10">
                   <MapPin className="text-pink-400 mr-4" size={24} />
                   <span className="text-white/80">Praha, Česká republika</span>
                 </div>
               </div>
               
-              <div className="mt-8 md:mt-12">
-                <h4 className="text-base md:text-lg font-bold text-white mb-4 md:mb-6 text-center md:text-left">Typy spolupráce</h4>
-                <div className="p-4 rounded-xl bg-slate-800/30 border border-purple-500/20">
-                  <div className="flex items-start md:items-center text-white/80 text-sm md:text-base text-center md:text-left">
+              <div className="mt-12">
+                <h4 className="text-lg font-bold text-white mb-6">Typy spolupráce</h4>
+                <div className="p-6 rounded-xl bg-slate-800/30 border border-purple-500/20">
+                  <div className="flex items-center justify-center text-white/80 text-base">
                     <div className="w-3 h-3 rounded-full mr-4 bg-gradient-to-r from-purple-400 to-pink-400"></div>
                     <span className="font-medium">Kreativní marketing prostřednictvím hudebních parodií a autorského obsahu</span>
                   </div>
                 </div>
               </div>
             </div>
-            
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 md:px-6 py-3 md:py-4 bg-slate-800/30 border border-white/20 rounded-xl text-white placeholder-white/50 focus:border-cyan-400 focus:ring-0 transition-colors text-sm md:text-base"
-                  placeholder="Jméno"
-                />
-              </div>
-              <div>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 md:px-6 py-3 md:py-4 bg-slate-800/30 border border-white/20 rounded-xl text-white placeholder-white/50 focus:border-cyan-400 focus:ring-0 transition-colors text-sm md:text-base"
-                  placeholder="Email"
-                />
-              </div>
-              <div>
-                <select 
-                  name="collaborationType"
-                  value={formData.collaborationType}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 md:px-6 py-3 md:py-4 bg-slate-800/30 border border-white/20 rounded-xl text-white focus:border-cyan-400 focus:ring-0 transition-colors text-sm md:text-base"
-                >
-                  <option value="">Typ spolupráce</option>
-                  <option value="marketing">Kreativní marketing prostřednictvím hudebních parodií</option>
-                  <option value="custom">Vlastní nápad na spolupráci</option>
-                </select>
-              </div>
-              <div>
-                <textarea
-                  rows={4}
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 md:px-6 py-3 md:py-4 bg-slate-800/30 border border-white/20 rounded-xl text-white placeholder-white/50 focus:border-cyan-400 focus:ring-0 resize-none transition-colors text-sm md:text-base"
-                  placeholder="Zpráva - popište svůj nápad nebo projekt"
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white py-3 md:py-4 rounded-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 text-sm md:text-base"
-              >
-                Odeslat zprávu
-              </button>
-            </form>
           </div>
         </div>
       </section>
