@@ -30,7 +30,7 @@ function App() {
     {
       title: "Na ostří nože - parodie",
       description: "Parodie na střevní potíže.",
-      metrics: "200K+ zhlédnutí • 1K sdílení",
+      metrics: "200K+ zhlédnutí • 10K sdílení",
       image: "https://images.pexels.com/photos/1370295/pexels-photo-1370295.jpeg?auto=compress&cs=tinysrgb&w=1200",
       videoUrl: "/videos/repre.mp4",
       type: "poetry"
