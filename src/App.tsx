@@ -183,7 +183,7 @@ function App() {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-white mb-1">Spotify</h3>
-                        <p className="text-green-400 font-medium text-sm">Poslechnout si můj nejnovější track</p>
+                        <p className="text-green-400 font-medium text-sm">Vzpomínám - Poslechnout si můj nejnovější track</p>
                       </div>
                     </div>
                     <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0">
