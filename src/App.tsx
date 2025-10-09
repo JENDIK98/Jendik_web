@@ -15,6 +15,7 @@ function App() {
     { platform: 'Instagram', followers: '30K', icon: Instagram, color: 'hover:text-pink-400', gradient: 'from-pink-500 to-purple-600' },
     { platform: 'YouTube', followers: '2K', icon: Youtube, color: 'hover:text-red-400', gradient: 'from-red-500 to-pink-500' },
     { platform: 'TikTok', followers: '30K', icon: Music, color: 'hover:text-cyan-400', gradient: 'from-cyan-500 to-blue-500' },
+    { platform: 'Spotify', followers: 'Moje songy', icon: Headphones, color: 'hover:text-green-400', gradient: 'from-green-500 to-emerald-500' },
   ];
 
   const portfolioItems = [
@@ -327,7 +328,8 @@ function App() {
                 href={
                   social.platform === 'Instagram' ? 'https://www.instagram.com/jan_stanek_98/?hl=cs' :
                   social.platform === 'YouTube' ? 'https://www.youtube.com/@jan_stanek_98' :
-                  social.platform === 'TikTok' ? 'https://www.tiktok.com/@jendik98' : '#'
+                  social.platform === 'TikTok' ? 'https://www.tiktok.com/@jendik98' :
+                  social.platform === 'Spotify' ? 'https://open.spotify.com/artist/YOUR_SPOTIFY_ID' : '#'
                 }
                 target="_blank"
                 rel="noopener noreferrer"
@@ -342,11 +344,11 @@ function App() {
                     </div>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3 text-center">{social.platform}</h3>
-                  <p className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-4 text-center">
-                    {social.followers} Sledujících
+                  <p className="text-xl md:text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-4 text-center">
+                    {social.platform === 'Spotify' ? social.followers : `${social.followers} Sledujících`}
                   </p>
                   <div className="text-white/60 font-medium opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    Sledovat
+                    {social.platform === 'Spotify' ? 'Poslechnout' : 'Sledovat'}
                     <ExternalLink className="ml-2" size={16} />
                   </div>
                 </div>
@@ -430,7 +432,8 @@ function App() {
                     href={
                       social.platform === 'Instagram' ? 'https://www.instagram.com/jan_stanek_98/?hl=cs' :
                       social.platform === 'YouTube' ? 'https://www.youtube.com/@jan_stanek_98' :
-                      social.platform === 'TikTok' ? 'https://www.tiktok.com/@jendik98' : '#'
+                      social.platform === 'TikTok' ? 'https://www.tiktok.com/@jendik98' :
+                      social.platform === 'Spotify' ? 'https://open.spotify.com/artist/YOUR_SPOTIFY_ID' : '#'
                     }
                     target="_blank"
                     rel="noopener noreferrer"
