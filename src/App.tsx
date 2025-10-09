@@ -15,7 +15,6 @@ function App() {
     { platform: 'Instagram', followers: '30K', icon: Instagram, color: 'hover:text-pink-400', gradient: 'from-pink-500 to-purple-600' },
     { platform: 'YouTube', followers: '2K', icon: Youtube, color: 'hover:text-red-400', gradient: 'from-red-500 to-pink-500' },
     { platform: 'TikTok', followers: '30K', icon: Music, color: 'hover:text-cyan-400', gradient: 'from-cyan-500 to-blue-500' },
-    { platform: 'Spotify', followers: 'Moje songy', icon: Headphones, color: 'hover:text-green-400', gradient: 'from-green-500 to-emerald-500' },
   ];
 
   const portfolioItems = [
@@ -161,6 +160,35 @@ function App() {
             >
               Poslechnout si mě
             </button>
+          </div>
+          
+          {/* Spotify Section - Under buttons */}
+          <div className="mb-12 sm:mb-20 px-4">
+            <div className="max-w-sm mx-auto">
+              <a
+                href="https://open.spotify.com/artist/YOUR_SPOTIFY_ID"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative p-6 md:p-8 rounded-2xl bg-slate-800/30 border border-white/10 hover:border-white/30 transition-all duration-500 cursor-pointer overflow-hidden block"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-green-500 to-emerald-500 opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
+                <div className="relative z-10">
+                  <div className="mb-6 flex justify-center">
+                    <div className="p-4 rounded-full bg-gradient-to-br from-green-500 to-emerald-500 group-hover:scale-110 transition-transform duration-300">
+                      <Headphones className="text-white" size={32} />
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3 text-center">Spotify</h3>
+                  <p className="text-xl md:text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-4 text-center">
+                    Moje songy
+                  </p>
+                  <div className="text-white/60 font-medium opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    Poslechnout
+                    <ExternalLink className="ml-2" size={16} />
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
           
           {/* Stats Section - Moved below buttons */}
@@ -328,8 +356,7 @@ function App() {
                 href={
                   social.platform === 'Instagram' ? 'https://www.instagram.com/jan_stanek_98/?hl=cs' :
                   social.platform === 'YouTube' ? 'https://www.youtube.com/@jan_stanek_98' :
-                  social.platform === 'TikTok' ? 'https://www.tiktok.com/@jendik98' :
-                  social.platform === 'Spotify' ? 'https://open.spotify.com/artist/YOUR_SPOTIFY_ID' : '#'
+                  social.platform === 'TikTok' ? 'https://www.tiktok.com/@jendik98' : '#'
                 }
                 target="_blank"
                 rel="noopener noreferrer"
@@ -345,10 +372,10 @@ function App() {
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3 text-center">{social.platform}</h3>
                   <p className="text-xl md:text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-4 text-center">
-                    {social.platform === 'Spotify' ? social.followers : `${social.followers} Sledujících`}
+                    {`${social.followers} Sledujících`}
                   </p>
                   <div className="text-white/60 font-medium opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    {social.platform === 'Spotify' ? 'Poslechnout' : 'Sledovat'}
+                    Sledovat
                     <ExternalLink className="ml-2" size={16} />
                   </div>
                 </div>
@@ -432,8 +459,7 @@ function App() {
                     href={
                       social.platform === 'Instagram' ? 'https://www.instagram.com/jan_stanek_98/?hl=cs' :
                       social.platform === 'YouTube' ? 'https://www.youtube.com/@jan_stanek_98' :
-                      social.platform === 'TikTok' ? 'https://www.tiktok.com/@jendik98' :
-                      social.platform === 'Spotify' ? 'https://open.spotify.com/artist/YOUR_SPOTIFY_ID' : '#'
+                      social.platform === 'TikTok' ? 'https://www.tiktok.com/@jendik98' : '#'
                     }
                     target="_blank"
                     rel="noopener noreferrer"
@@ -442,6 +468,14 @@ function App() {
                     <social.icon size={20} className="text-white" />
                   </a>
                 ))}
+                <a
+                  href="https://open.spotify.com/artist/YOUR_SPOTIFY_ID"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 rounded-full bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center hover:scale-110 transition-transform duration-300"
+                >
+                  <Headphones size={20} className="text-white" />
+                </a>
               </div>
             </div>
           </div>
