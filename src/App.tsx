@@ -129,6 +129,10 @@ function App() {
               <BookOpen className="text-cyan-400" size={20} />
               <span className="text-white font-medium">Básník</span>
             </div>
+            <div className="flex items-center gap-2 bg-slate-800/50 px-4 py-2 rounded-full border border-green-500/30">
+              <Headphones className="text-green-400" size={20} />
+              <span className="text-white font-medium">Songwriter</span>
+            </div>
             <div className="flex items-center gap-2 bg-slate-800/50 px-4 py-2 rounded-full border border-purple-500/30">
               <Music className="text-purple-400" size={20} />
               <span className="text-white font-medium">Parodista</span>
@@ -187,13 +191,13 @@ function App() {
               </h2>
               <div className="space-y-4 md:space-y-6 text-base md:text-lg text-white/80 font-light leading-relaxed text-center md:text-left">
                 <p>
-                  Jsem JENDIK a věnuji se tomu, co mě baví nejvíc - tvorbě básní a parodií na populární písničky. 
+                  Jsem JENDIK a věnuji se tomu, co mě baví nejvíc - tvorbě básní, parodií na populární písničky a psaní vlastních songů. 
                   Začal jsem jako hobby, ale postupně se to stalo mou vášní a způsobem, jak bavit lidi.
                 </p>
                 <p>
-                  Moje básně často reflektují současný svět s humorem a ironií. Parodie písniček vytvářím tak, 
-                  aby byly vtipné, ale zároveň chytlavé. Věřím, že humor je nejlepší způsob, jak se vypořádat 
-                  s absurditou moderního života.
+                  Moje básně často reflektují současný svět s humorem a ironií. Parodie písniček i vlastní songy vytvářím tak, 
+                  aby byly vtipné, ale zároveň chytlavé a melodické. Jako songwriter se snažím zachytit emoce a příběhy, 
+                  které rezonují s lidmi. Věřím, že humor a hudba jsou nejlepší způsoby, jak se vypořádat s absurditou moderního života.
                 </p>
               </div>
               
