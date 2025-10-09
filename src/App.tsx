@@ -164,25 +164,22 @@ function App() {
           
           {/* Spotify Section - Under buttons */}
           <div className="mb-12 sm:mb-20 px-4">
-            <div className="max-w-sm mx-auto">
+            <div className="max-w-2xl mx-auto">
               <a
                 href="https://open.spotify.com/artist/YOUR_SPOTIFY_ID"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative p-6 md:p-8 rounded-2xl bg-slate-800/30 border border-white/10 hover:border-white/30 transition-all duration-500 cursor-pointer overflow-hidden block"
+                className="group relative p-4 md:p-6 rounded-2xl bg-slate-800/30 border border-white/10 hover:border-white/30 transition-all duration-500 cursor-pointer overflow-hidden block"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-green-500 to-emerald-500 opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
                 <div className="relative z-10">
-                  <div className="mb-6 flex justify-center">
-                    <div className="p-4 rounded-full bg-gradient-to-br from-green-500 to-emerald-500 group-hover:scale-110 transition-transform duration-300">
-                      <Headphones className="text-white" size={32} />
+                  <div className="mb-4 flex justify-center">
+                    <div className="p-3 rounded-full bg-gradient-to-br from-green-500 to-emerald-500 group-hover:scale-110 transition-transform duration-300">
+                      <Headphones className="text-white" size={24} />
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3 text-center">Spotify</h3>
-                  <p className="text-xl md:text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-4 text-center">
-                    Moje songy
-                  </p>
-                  <div className="text-white/60 font-medium opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <h3 className="text-lg font-bold text-white mb-3 text-center">Spotify</h3>
+                  <div className="text-white/60 font-medium opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-sm">
                     Poslechnout
                     <ExternalLink className="ml-2" size={16} />
                   </div>
