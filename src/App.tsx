@@ -183,12 +183,13 @@ function App() {
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-white mb-1">Spotify</h3>
-                        <p className="text-green-400 font-medium text-sm">Vzpomínám - Poslechnout si můj nejnovější track</p>
+                        <p className="text-green-400 font-medium text-sm mb-1">🎵 Vzpomínám</p>
+                        <p className="text-white/70 text-xs">Můj nejnovější hit • Poslechni si teď!</p>
                       </div>
                     </div>
                     <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0">
                       <div className="flex items-center gap-2 text-white/80">
-                        <span className="text-sm font-medium">Přehrát</span>
+                        <span className="text-sm font-medium">▶ Přehrát</span>
                         <ExternalLink size={18} />
                       </div>
                     </div>
