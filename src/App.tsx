@@ -38,7 +38,7 @@ function App() {
     {
       title: "Pistácie - parodie",
       description: "Realita",
-      metrics: "150K+ zhlédnutí • 800 sdílení",
+      metrics: "200K+ zhlédnutí • 7K sdílení",
       image: "https://images.pexels.com/photos/1295572/pexels-photo-1295572.jpeg?auto=compress&cs=tinysrgb&w=1200",
       videoUrl: "/videos/pistace.mp4",
       type: "music"
