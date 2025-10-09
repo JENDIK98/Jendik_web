@@ -166,7 +166,7 @@ function App() {
           <div className="mb-12 sm:mb-20 px-4">
             <div className="max-w-2xl mx-auto">
               <a
-                href="https://open.spotify.com/artist/YOUR_SPOTIFY_ID"
+                href="https://open.spotify.com/track/3fkC9HJqOfV3dZ8zbcROBP?si=156ca75fc85f4564"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative p-4 md:p-6 rounded-2xl bg-slate-800/30 border border-white/10 hover:border-white/30 transition-all duration-500 cursor-pointer overflow-hidden block"
@@ -466,7 +466,7 @@ function App() {
                   </a>
                 ))}
                 <a
-                  href="https://open.spotify.com/artist/YOUR_SPOTIFY_ID"
+                  href="https://open.spotify.com/track/3fkC9HJqOfV3dZ8zbcROBP?si=156ca75fc85f4564"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-full bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center hover:scale-110 transition-transform duration-300"
