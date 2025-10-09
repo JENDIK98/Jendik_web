@@ -35,6 +35,14 @@ function App() {
       videoUrl: "/videos/repre.mp4",
       type: "poetry"
     },
+    {
+      title: "Pistácie - parodie",
+      description: "Realita",
+      metrics: "150K+ zhlédnutí • 800 sdílení",
+      image: "https://images.pexels.com/photos/1295572/pexels-photo-1295572.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      videoUrl: "/videos/pistace.mp4",
+      type: "music"
+    },
   ];
 
   const scrollToSection = (sectionId: string) => {
