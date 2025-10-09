@@ -255,7 +255,6 @@ function App() {
                         className="w-full h-full object-cover"
                         controls
                         preload="metadata"
-                        poster={item.image}
                       >
                         <source src={item.videoUrl} type="video/mp4" />
                         Váš prohlížeč nepodporuje video tag.
