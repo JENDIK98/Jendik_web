@@ -438,12 +438,17 @@ function App() {
             <div>
               <h4 className="font-bold text-white mb-4">Rychlé odkazy</h4>
               <div className="space-y-3">
-                {['O mně', 'Tvorba', 'Kontakt'].map((item) => (
+                {[
+                  { label: 'O mně', id: 'about' },
+                  { label: 'Tvorba', id: 'portfolio' },
+                  { label: 'Kontakt', id: 'contact' }
+                ].map((item) => (
                   <button
-                    key={item}
+                    key={item.id}
+                    onClick={() => scrollToSection(item.id)}
                     className="block w-full text-center md:text-left text-white/70 hover:text-white transition-colors font-light text-sm md:text-base hover:drop-shadow-lg"
                   >
-                    {item}
+                    {item.label}
                   </button>
                 ))}
               </div>
