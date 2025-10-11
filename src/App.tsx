@@ -182,8 +182,10 @@ function App() {
                         <Headphones className="text-white" size={28} />
                       </div>
                       <div>
-                        <h3 className="text-2xl font-bold text-white mb-1">Spotify</h3>
-                        <p className="text-green-400 font-semibold text-base mb-1">🎵 Vzpomínám</p>
+                        <div className="flex items-center gap-3 mb-1">
+                          <h3 className="text-lg font-bold text-white">Spotify</h3>
+                          <p className="text-green-400 font-semibold text-base">🎵 Vzpomínám</p>
+                        </div>
                         <p className="text-white/80 text-sm font-medium">Můj nejnovější hit • Poslechni si teď!</p>
                       </div>
                     </div>
