@@ -106,40 +106,42 @@ function App() {
       {/* Hero Section - Futuristic Style */}
       {/* Stats Section - Moved to top for collaboration importance */}
       {/* Hero Section - Futuristic Style */}
-      <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+      <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 bg-gradient-to-br from-slate-900 via-purple-900/80 to-slate-900">
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-pink-500/5 rounded-full blur-3xl animate-pulse delay-2000"></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-pink-500/15 rounded-full blur-3xl animate-pulse delay-2000"></div>
+          <div className="absolute top-10 right-1/4 w-48 h-48 bg-green-500/10 rounded-full blur-2xl animate-pulse delay-3000"></div>
+          <div className="absolute bottom-10 left-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-2xl animate-pulse delay-4000"></div>
         </div>
 
-        <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
+        <div className="max-w-6xl mx-auto px-6 text-center relative z-10 backdrop-blur-sm">
           {/* JENDIK Title - Desktop Only */}
           <div className="hidden md:flex items-center justify-center gap-4 mb-8">
-            <span className="text-cyan-400 text-6xl">∞</span>
-            <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <span className="text-cyan-400 text-6xl animate-pulse">∞</span>
+            <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent drop-shadow-2xl">
               JENDIK
             </h1>
-            <span className="text-cyan-400 text-6xl">∞</span>
+            <span className="text-cyan-400 text-6xl animate-pulse">∞</span>
           </div>
           
           <div className="flex flex-row items-center justify-center gap-4 mb-8 sm:mb-12">
-            <div className="flex items-center gap-2 bg-slate-800/50 px-4 py-2 rounded-full border border-cyan-500/30">
+            <div className="flex items-center gap-2 bg-slate-800/60 backdrop-blur-md px-4 py-2 rounded-full border border-cyan-500/40 shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 transition-all duration-300">
               <BookOpen className="text-cyan-400" size={20} />
               <span className="text-white font-medium">Básník</span>
             </div>
-            <div className="flex items-center gap-2 bg-slate-800/50 px-4 py-2 rounded-full border border-green-500/30">
+            <div className="flex items-center gap-2 bg-slate-800/60 backdrop-blur-md px-4 py-2 rounded-full border border-green-500/40 shadow-lg shadow-green-500/20 hover:shadow-green-500/40 transition-all duration-300">
               <Headphones className="text-green-400" size={20} />
               <span className="text-white font-medium">Songwriter</span>
             </div>
-            <div className="flex items-center gap-2 bg-slate-800/50 px-4 py-2 rounded-full border border-purple-500/30">
+            <div className="flex items-center gap-2 bg-slate-800/60 backdrop-blur-md px-4 py-2 rounded-full border border-purple-500/40 shadow-lg shadow-purple-500/20 hover:shadow-purple-500/40 transition-all duration-300">
               <Music className="text-purple-400" size={20} />
               <span className="text-white font-medium">Parodista</span>
             </div>
           </div>
           
-          <p className="text-lg sm:text-xl md:text-2xl text-white/80 mb-12 sm:mb-16 font-light leading-relaxed max-w-4xl mx-auto px-4 text-center">
+          <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-12 sm:mb-16 font-light leading-relaxed max-w-4xl mx-auto px-4 text-center drop-shadow-lg">
             Tvořím básně, které tě rozesmějí, a parodie písniček, které si budeš zpívat celý den. 
             Spojuji humor s poezií a hudbu s nečekanými zvraty.
           </p>
@@ -147,7 +149,7 @@ function App() {
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12 sm:mb-20 px-4">
             <button 
               onClick={() => scrollToSection('contact')}
-              className="w-full sm:w-auto group relative bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center"
+              className="w-full sm:w-auto group relative bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-500/50 flex items-center justify-center backdrop-blur-sm border border-white/10"
             >
               <span className="flex items-center justify-center gap-2">
                 <Users size={20} />
@@ -156,7 +158,7 @@ function App() {
             </button>
             <button 
               onClick={() => scrollToSection('portfolio')}
-              className="w-full sm:w-auto group text-white border-2 border-white/30 hover:border-white/60 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold transition-all duration-300 hover:bg-white/10"
+              className="w-full sm:w-auto group text-white border-2 border-white/40 hover:border-white/80 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold transition-all duration-300 hover:bg-white/20 backdrop-blur-md shadow-lg hover:shadow-white/20"
             >
               Poslechnout si mě
             </button>
@@ -204,15 +206,15 @@ function App() {
           
           {/* Stats Section - Moved below buttons */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-3xl mx-auto px-4">
-            <div className="p-6 rounded-2xl bg-slate-800/30 border border-cyan-500/20">
+            <div className="p-6 rounded-2xl bg-slate-800/40 backdrop-blur-md border border-cyan-500/30 shadow-lg shadow-cyan-500/10 hover:shadow-cyan-500/20 transition-all duration-300">
               <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2">70K+</div>
               <div className="text-white/60 font-light text-sm">Celkové sledování</div>
             </div>
-            <div className="p-6 rounded-2xl bg-slate-800/30 border border-purple-500/20">
+            <div className="p-6 rounded-2xl bg-slate-800/40 backdrop-blur-md border border-purple-500/30 shadow-lg shadow-purple-500/10 hover:shadow-purple-500/20 transition-all duration-300">
               <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">2M+</div>
               <div className="text-white/60 font-light text-sm">Přehrání</div>
             </div>
-            <div className="p-6 rounded-2xl bg-slate-800/30 border border-pink-500/20">
+            <div className="p-6 rounded-2xl bg-slate-800/40 backdrop-blur-md border border-pink-500/30 shadow-lg shadow-pink-500/10 hover:shadow-pink-500/20 transition-all duration-300">
               <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-pink-400 to-red-400 bg-clip-text text-transparent mb-2">50+</div>
               <div className="text-white/60 font-light text-sm">Vytvořených děl</div>
             </div>
@@ -222,14 +224,18 @@ function App() {
 
       {/* About Section - Futuristic Style */}
       <section id="about" className="py-24 relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/50 to-purple-900/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/70 to-purple-900/70 backdrop-blur-sm"></div>
+        <div className="absolute inset-0">
+          <div className="absolute top-10 left-20 w-64 h-64 bg-cyan-500/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
+          <div className="absolute bottom-20 right-20 w-80 h-80 bg-purple-500/10 rounded-full blur-2xl animate-pulse delay-2000"></div>
+        </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
             <div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-6">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-6 drop-shadow-2xl">
                 O mně
               </h2>
-              <div className="space-y-4 md:space-y-6 text-base md:text-lg text-white/80 font-light leading-relaxed text-center md:text-left">
+              <div className="space-y-4 md:space-y-6 text-base md:text-lg text-white/90 font-light leading-relaxed text-center md:text-left drop-shadow-lg">
                 <p>
                   Jsem JENDIK a věnuji se tomu, co mě baví nejvíc - tvorbě básní, parodií na populární písničky a psaní vlastních songů. 
                   Začal jsem jako hobby, ale postupně se to stalo mou vášní a způsobem, jak bavit lidi.
@@ -242,15 +248,15 @@ function App() {
               </div>
               
               <div className="grid grid-cols-3 gap-4 md:gap-8 mt-8 md:mt-12">
-                <div className="text-center p-4 md:p-6 rounded-xl bg-slate-800/30 border border-cyan-500/20 flex flex-col items-center justify-center">
+                <div className="text-center p-4 md:p-6 rounded-xl bg-slate-800/40 backdrop-blur-md border border-cyan-500/30 shadow-lg shadow-cyan-500/10 hover:shadow-cyan-500/20 transition-all duration-300 flex flex-col items-center justify-center">
                   <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2">50+</div>
                   <div className="text-sm text-white/60 font-medium">Básní</div>
                 </div>
-                <div className="text-center p-4 md:p-6 rounded-xl bg-slate-800/30 border border-purple-500/20 flex flex-col items-center justify-center">
+                <div className="text-center p-4 md:p-6 rounded-xl bg-slate-800/40 backdrop-blur-md border border-purple-500/30 shadow-lg shadow-purple-500/10 hover:shadow-purple-500/20 transition-all duration-300 flex flex-col items-center justify-center">
                   <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">20+</div>
                   <div className="text-sm text-white/60 font-medium">Parodií</div>
                 </div>
-                <div className="text-center p-4 md:p-6 rounded-xl bg-slate-800/30 border border-pink-500/20 flex flex-col items-center justify-center">
+                <div className="text-center p-4 md:p-6 rounded-xl bg-slate-800/40 backdrop-blur-md border border-pink-500/30 shadow-lg shadow-pink-500/10 hover:shadow-pink-500/20 transition-all duration-300 flex flex-col items-center justify-center">
                   <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-pink-400 to-red-400 bg-clip-text text-transparent mb-2">70K</div>
                   <div className="text-sm text-white/60 font-medium">Followerů</div>
                 </div>
@@ -259,7 +265,7 @@ function App() {
             
             <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden border-4 border-gradient-to-r from-cyan-400 to-purple-400 p-1 max-w-md mx-auto">
-                <div className="w-full h-full rounded-xl overflow-hidden">
+                <div className="w-full h-full rounded-xl overflow-hidden shadow-2xl">
                   <img 
                     src="/IMG_3425.JPG"
                     alt="JENDIK Profile"
@@ -274,12 +280,16 @@ function App() {
 
       {/* Portfolio Section - Futuristic Style */}
       <section id="portfolio" className="py-24 relative">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 right-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-10 left-10 w-64 h-64 bg-cyan-500/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
+        </div>
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-6 drop-shadow-2xl">
               Moje tvorba
             </h2>
-            <p className="text-lg md:text-xl text-white/70 font-light px-4">
+            <p className="text-lg md:text-xl text-white/80 font-light px-4 drop-shadow-lg">
               Nejlepší básně, parodie a hudební projekty
             </p>
           </div>
@@ -296,7 +306,7 @@ function App() {
                   <div className="aspect-[9/16] max-w-xs sm:max-w-sm mx-auto rounded-2xl overflow-hidden border border-white/20 group cursor-pointer">
                     {item.videoUrl ? (
                       <video 
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover shadow-2xl"
                         controls
                         preload="metadata"
                       >
@@ -308,9 +318,9 @@ function App() {
                         <img 
                           src={item.image}
                           alt={item.title}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 shadow-2xl"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
                           <Play className="text-white w-16 h-16" />
                         </div>
                       </>
@@ -324,7 +334,7 @@ function App() {
                 </div>
                 <div className={index % 2 === 1 ? 'md:col-start-1' : ''}>
                   <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 text-center md:text-left">{item.title}</h3>
-                  <p className="text-base md:text-lg text-white/70 font-light leading-relaxed mb-6 text-center md:text-left px-4 md:px-0">
+                  <p className="text-base md:text-lg text-white/80 font-light leading-relaxed mb-6 text-center md:text-left px-4 md:px-0 drop-shadow-lg">
                     {item.description}
                   </p>
                   <div className="text-sm text-cyan-400 font-medium mb-6 flex items-center justify-center md:justify-start gap-2">
@@ -336,7 +346,7 @@ function App() {
                       href={item.instagramUrl || "https://www.instagram.com/jan_stanek_98/?hl=cs"}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-6 py-3 rounded-full font-bold transition-all duration-300 flex items-center gap-2"
+                      className="group bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-6 py-3 rounded-full font-bold transition-all duration-300 flex items-center gap-2 shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 backdrop-blur-sm border border-white/10"
                     >
                       Více na Instagramu
                       <ExternalLink size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -351,12 +361,16 @@ function App() {
 
       {/* Social Media Section - Futuristic Style */}
       <section className="py-24 relative">
+        <div className="absolute inset-0">
+          <div className="absolute top-10 left-1/4 w-48 h-48 bg-pink-500/10 rounded-full blur-2xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
+        </div>
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-6 drop-shadow-2xl">
               Najdeš mě všude
             </h2>
-            <p className="text-lg md:text-xl text-white/70 font-light">
+            <p className="text-lg md:text-xl text-white/80 font-light drop-shadow-lg">
               Sleduj mou tvorbu na všech platformách
             </p>
           </div>
@@ -372,12 +386,12 @@ function App() {
                 target="_blank"
                 rel="noopener noreferrer"
                 key={index}
-                className="group relative p-6 md:p-8 rounded-2xl bg-slate-800/30 border border-white/10 hover:border-white/30 transition-all duration-500 cursor-pointer overflow-hidden"
+                className="group relative p-6 md:p-8 rounded-2xl bg-slate-800/40 backdrop-blur-md border border-white/20 hover:border-white/40 transition-all duration-500 cursor-pointer overflow-hidden shadow-lg hover:shadow-2xl"
               >
-                <div className={`absolute inset-0 bg-gradient-to-br ${social.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
+                <div className={`absolute inset-0 bg-gradient-to-br ${social.gradient} opacity-0 group-hover:opacity-15 transition-opacity duration-500`}></div>
                 <div className="relative z-10">
                   <div className="mb-6 flex justify-center">
-                    <div className={`p-4 rounded-full bg-gradient-to-br ${social.gradient} group-hover:scale-110 transition-transform duration-300`}>
+                    <div className={`p-4 rounded-full bg-gradient-to-br ${social.gradient} group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                       <social.icon className="text-white" size={32} />
                     </div>
                   </div>
@@ -398,12 +412,16 @@ function App() {
 
       {/* Contact Section - Futuristic Style */}
       <section id="contact" className="py-24 relative">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-10 right-10 w-72 h-72 bg-purple-500/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
+        </div>
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-20">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-6 drop-shadow-2xl">
               Pojďme tvořit
             </h2>
-            <p className="text-lg md:text-xl text-white/70 font-light">
+            <p className="text-lg md:text-xl text-white/80 font-light drop-shadow-lg">
               Máš nápad na spolupráci? Ozvi se!
             </p>
           </div>
@@ -412,11 +430,11 @@ function App() {
             <div className="text-center">
               <h3 className="text-xl md:text-2xl font-bold text-white mb-8">Kontaktní informace</h3>
               <div className="space-y-6">
-                <div className="flex items-center justify-center p-6 rounded-xl bg-slate-800/30 border border-white/10">
+                <div className="flex items-center justify-center p-6 rounded-xl bg-slate-800/40 backdrop-blur-md border border-white/20 shadow-lg hover:shadow-cyan-500/20 transition-all duration-300">
                   <Mail className="text-cyan-400 mr-4" size={24} />
                   <span className="text-white/80 text-sm md:text-base break-all">jan.stanek.spoluprace@gmail.com</span>
                 </div>
-                <div className="flex items-center justify-center p-6 rounded-xl bg-slate-800/30 border border-white/10">
+                <div className="flex items-center justify-center p-6 rounded-xl bg-slate-800/40 backdrop-blur-md border border-white/20 shadow-lg hover:shadow-pink-500/20 transition-all duration-300">
                   <MapPin className="text-pink-400 mr-4" size={24} />
                   <span className="text-white/80">Praha, Česká republika</span>
                 </div>
@@ -424,7 +442,7 @@ function App() {
               
               <div className="mt-12">
                 <h4 className="text-lg font-bold text-white mb-6">Typy spolupráce</h4>
-                <div className="p-6 rounded-xl bg-slate-800/30 border border-purple-500/20">
+                <div className="p-6 rounded-xl bg-slate-800/40 backdrop-blur-md border border-purple-500/30 shadow-lg shadow-purple-500/10 hover:shadow-purple-500/20 transition-all duration-300">
                   <div className="flex items-center justify-center text-white/80 text-base">
                     <div className="w-3 h-3 rounded-full mr-4 bg-gradient-to-r from-purple-400 to-pink-400"></div>
                     <span className="font-medium">Kreativní marketing prostřednictvím hudebních parodií a autorského obsahu</span>
@@ -437,14 +455,14 @@ function App() {
       </section>
 
       {/* Footer - Futuristic Style */}
-      <footer className="bg-slate-900/50 py-12 md:py-16 border-t border-white/10">
+      <footer className="bg-slate-900/70 backdrop-blur-md py-12 md:py-16 border-t border-white/20 shadow-2xl">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 text-center md:text-left">
             <div>
-              <div className="text-3xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
+              <div className="text-3xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4 drop-shadow-lg">
                 JENDIK
               </div>
-              <p className="text-white/60 font-light leading-relaxed text-sm md:text-base">
+              <p className="text-white/70 font-light leading-relaxed text-sm md:text-base drop-shadow-sm">
               Básník a parodista, který baví a inspiruje tisíce lidí každý den.
               </p>
             </div>
@@ -454,7 +472,7 @@ function App() {
                 {['O mně', 'Tvorba', 'Kontakt'].map((item) => (
                   <button
                     key={item}
-                    className="block w-full text-center md:text-left text-white/60 hover:text-white transition-colors font-light text-sm md:text-base"
+                    className="block w-full text-center md:text-left text-white/70 hover:text-white transition-colors font-light text-sm md:text-base hover:drop-shadow-lg"
                   >
                     {item}
                   </button>
@@ -474,7 +492,7 @@ function App() {
                     }
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`w-12 h-12 rounded-full bg-gradient-to-br ${social.gradient} flex items-center justify-center hover:scale-110 transition-transform duration-300`}
+                    className={`w-12 h-12 rounded-full bg-gradient-to-br ${social.gradient} flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-lg hover:shadow-xl`}
                   >
                     <social.icon size={20} className="text-white" />
                   </a>
@@ -483,15 +501,15 @@ function App() {
                   href="https://open.spotify.com/track/3fkC9HJqOfV3dZ8zbcROBP?si=156ca75fc85f4564"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center hover:scale-110 transition-transform duration-300"
+                  className="w-12 h-12 rounded-full bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-lg hover:shadow-xl"
                 >
                   <Headphones size={20} className="text-white" />
                 </a>
               </div>
             </div>
           </div>
-          <div className="border-t border-white/10 mt-8 md:mt-12 pt-6 md:pt-8 text-center">
-            <p className="text-white/40 font-light text-xs md:text-sm">
+          <div className="border-t border-white/20 mt-8 md:mt-12 pt-6 md:pt-8 text-center">
+            <p className="text-white/50 font-light text-xs md:text-sm drop-shadow-sm">
               © 2024 JENDIK. Všechna práva vyhrazena. Vytvořeno s láskou k poezii a hudbě.
             </p>
           </div>
