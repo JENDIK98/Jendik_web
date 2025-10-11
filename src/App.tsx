@@ -106,40 +106,38 @@ function App() {
       {/* Hero Section - Futuristic Style */}
       {/* Stats Section - Moved to top for collaboration importance */}
       {/* Hero Section - Futuristic Style */}
-      <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 bg-gradient-to-br from-slate-900 via-purple-900/80 to-slate-900">
+      <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-pink-500/15 rounded-full blur-3xl animate-pulse delay-2000"></div>
-          <div className="absolute top-10 right-1/4 w-48 h-48 bg-green-500/10 rounded-full blur-2xl animate-pulse delay-3000"></div>
-          <div className="absolute bottom-10 left-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-2xl animate-pulse delay-4000"></div>
         </div>
 
-        <div className="max-w-6xl mx-auto px-6 text-center relative z-10 backdrop-blur-sm">
+        <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
           {/* JENDIK Title - Desktop Only */}
           <div className="hidden md:flex items-center justify-center gap-4 mb-8">
-            <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent drop-shadow-2xl">
+            <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               JENDIK
             </h1>
           </div>
           
           <div className="flex flex-row items-center justify-center gap-4 mb-8 sm:mb-12">
-            <div className="flex items-center gap-2 bg-slate-800/60 backdrop-blur-md px-4 py-2 rounded-full border border-cyan-500/40 shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 transition-all duration-300">
+            <div className="flex items-center gap-2 bg-slate-800/50 px-4 py-2 rounded-full border border-cyan-500/30">
               <BookOpen className="text-cyan-400" size={20} />
               <span className="text-white font-medium">Básník</span>
             </div>
-            <div className="flex items-center gap-2 bg-slate-800/60 backdrop-blur-md px-4 py-2 rounded-full border border-green-500/40 shadow-lg shadow-green-500/20 hover:shadow-green-500/40 transition-all duration-300">
+            <div className="flex items-center gap-2 bg-slate-800/50 px-4 py-2 rounded-full border border-green-500/30">
               <Headphones className="text-green-400" size={20} />
               <span className="text-white font-medium">Songwriter</span>
             </div>
-            <div className="flex items-center gap-2 bg-slate-800/60 backdrop-blur-md px-4 py-2 rounded-full border border-purple-500/40 shadow-lg shadow-purple-500/20 hover:shadow-purple-500/40 transition-all duration-300">
+            <div className="flex items-center gap-2 bg-slate-800/50 px-4 py-2 rounded-full border border-purple-500/30">
               <Music className="text-purple-400" size={20} />
               <span className="text-white font-medium">Parodista</span>
             </div>
           </div>
           
-          <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-12 sm:mb-16 font-light leading-relaxed max-w-4xl mx-auto px-4 text-center drop-shadow-lg">
+          <p className="text-lg sm:text-xl md:text-2xl text-white/80 mb-12 sm:mb-16 font-light leading-relaxed max-w-4xl mx-auto px-4 text-center">
             Tvořím básně, které tě rozesmějí, a parodie písniček, které si budeš zpívat celý den. 
             Spojuji humor s poezií a hudbu s nečekanými zvraty.
           </p>
@@ -147,7 +145,7 @@ function App() {
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12 sm:mb-20 px-4">
             <button 
               onClick={() => scrollToSection('contact')}
-              className="w-full sm:w-auto group relative bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-500/50 flex items-center justify-center backdrop-blur-sm border border-white/10"
+              className="w-full sm:w-auto group relative bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
             >
               <span className="flex items-center justify-center gap-2">
                 <Users size={20} />
@@ -156,7 +154,7 @@ function App() {
             </button>
             <button 
               onClick={() => scrollToSection('portfolio')}
-              className="w-full sm:w-auto group text-white border-2 border-white/40 hover:border-white/80 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold transition-all duration-300 hover:bg-white/20 backdrop-blur-md shadow-lg hover:shadow-white/20"
+              className="w-full sm:w-auto group text-white border-2 border-white/30 hover:border-white/60 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold transition-all duration-300 hover:bg-white/10"
             >
               Poslechnout si mě
             </button>
@@ -169,7 +167,7 @@ function App() {
                 href="https://open.spotify.com/track/3fkC9HJqOfV3dZ8zbcROBP?si=156ca75fc85f4564"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative p-3 md:p-4 rounded-2xl bg-gradient-to-br from-slate-800/40 to-slate-900/60 border border-green-500/20 hover:border-green-400/40 transition-all duration-500 cursor-pointer overflow-hidden block shadow-xl hover:shadow-green-500/10"
+                className="group relative p-3 md:p-4 rounded-2xl bg-gradient-to-br from-slate-800/40 to-slate-900/60 border border-green-500/20 hover:border-green-400/40 transition-all duration-500 cursor-pointer overflow-hidden block"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-green-500 via-emerald-500 to-green-600 opacity-0 group-hover:opacity-15 transition-opacity duration-500"></div>
                 <div className="absolute top-4 right-4 opacity-20 group-hover:opacity-40 transition-opacity duration-300">
@@ -204,15 +202,15 @@ function App() {
           
           {/* Stats Section - Moved below buttons */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-3xl mx-auto px-4">
-            <div className="p-6 rounded-2xl bg-slate-800/40 backdrop-blur-md border border-cyan-500/30 shadow-lg shadow-cyan-500/10 hover:shadow-cyan-500/20 transition-all duration-300">
+            <div className="p-6 rounded-2xl bg-slate-800/30 border border-cyan-500/20">
               <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2">70K+</div>
               <div className="text-white/60 font-light text-sm">Celkové sledování</div>
             </div>
-            <div className="p-6 rounded-2xl bg-slate-800/40 backdrop-blur-md border border-purple-500/30 shadow-lg shadow-purple-500/10 hover:shadow-purple-500/20 transition-all duration-300">
+            <div className="p-6 rounded-2xl bg-slate-800/30 border border-purple-500/20">
               <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">2M+</div>
               <div className="text-white/60 font-light text-sm">Přehrání</div>
             </div>
-            <div className="p-6 rounded-2xl bg-slate-800/40 backdrop-blur-md border border-pink-500/30 shadow-lg shadow-pink-500/10 hover:shadow-pink-500/20 transition-all duration-300">
+            <div className="p-6 rounded-2xl bg-slate-800/30 border border-pink-500/20">
               <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-pink-400 to-red-400 bg-clip-text text-transparent mb-2">50+</div>
               <div className="text-white/60 font-light text-sm">Vytvořených děl</div>
             </div>
