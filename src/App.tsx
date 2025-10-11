@@ -164,12 +164,12 @@ function App() {
           
           {/* Spotify Section - Under buttons */}
           <div className="mb-12 sm:mb-20 px-4">
-            <div className="max-w-2xl mx-auto">
+            <div className="max-w-md mx-auto">
               <a
                 href="https://open.spotify.com/track/3fkC9HJqOfV3dZ8zbcROBP?si=156ca75fc85f4564"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative p-6 md:p-8 rounded-3xl bg-gradient-to-br from-slate-800/40 to-slate-900/60 border border-green-500/20 hover:border-green-400/40 transition-all duration-500 cursor-pointer overflow-hidden block shadow-xl hover:shadow-green-500/10"
+                className="group relative p-3 md:p-4 rounded-2xl bg-gradient-to-br from-slate-800/40 to-slate-900/60 border border-green-500/20 hover:border-green-400/40 transition-all duration-500 cursor-pointer overflow-hidden block shadow-xl hover:shadow-green-500/10"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-green-500 via-emerald-500 to-green-600 opacity-0 group-hover:opacity-15 transition-opacity duration-500"></div>
                 <div className="absolute top-4 right-4 opacity-20 group-hover:opacity-40 transition-opacity duration-300">
