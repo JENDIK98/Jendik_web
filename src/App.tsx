@@ -112,12 +112,14 @@ function App() {
           <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-pink-500/15 rounded-full blur-3xl animate-pulse delay-2000"></div>
+          <div className="absolute top-10 right-20 w-48 h-48 bg-blue-500/15 rounded-full blur-2xl animate-pulse delay-500"></div>
+          <div className="absolute bottom-10 left-20 w-64 h-64 bg-green-500/10 rounded-full blur-2xl animate-pulse delay-1500"></div>
         </div>
 
-        <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
+        <div className="max-w-6xl mx-auto px-6 text-center relative z-10 backdrop-blur-sm">
           {/* JENDIK Title - Desktop Only */}
           <div className="hidden md:flex items-center justify-center gap-4 mb-8">
-            <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent drop-shadow-2xl">
               JENDIK
             </h1>
           </div>
@@ -137,7 +139,7 @@ function App() {
             </div>
           </div>
           
-          <p className="text-lg sm:text-xl md:text-2xl text-white/80 mb-12 sm:mb-16 font-light leading-relaxed max-w-4xl mx-auto px-4 text-center">
+          <p className="text-lg sm:text-xl md:text-2xl text-white/80 mb-12 sm:mb-16 font-light leading-relaxed max-w-4xl mx-auto px-4 text-center drop-shadow-lg">
             Tvořím básně, které tě rozesmějí, a parodie písniček, které si budeš zpívat celý den. 
             Spojuji humor s poezií a hudbu s nečekanými zvraty.
           </p>
