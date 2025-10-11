@@ -119,11 +119,9 @@ function App() {
         <div className="max-w-6xl mx-auto px-6 text-center relative z-10 backdrop-blur-sm">
           {/* JENDIK Title - Desktop Only */}
           <div className="hidden md:flex items-center justify-center gap-4 mb-8">
-            <span className="text-cyan-400 text-6xl animate-pulse">∞</span>
             <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent drop-shadow-2xl">
               JENDIK
             </h1>
-            <span className="text-cyan-400 text-6xl animate-pulse">∞</span>
           </div>
           
           <div className="flex flex-row items-center justify-center gap-4 mb-8 sm:mb-12">
