@@ -7,8 +7,9 @@
 ├── index.html          ← Hlavní stránka (z dist/)
 ├── IMG_3425.JPG        ← Tvůj profilový obrázek
 ├── assets/             ← Složka se styly a skripty (z dist/)
-│   ├── main.js         ← JavaScript soubory
-│   └── main.css        ← CSS styly
+│   ├── index-[hash].js ← Hlavní JavaScript soubor (s hashem)
+│   ├── index-[hash].css← Hlavní CSS soubor (s hashem)
+│   └── další soubory   ← Případné další assets (fonty, obrázky)
 └── videos/             ← Složka s videi (vytvoříš ručně)
     ├── rozvrh.mp4      ← Video "Rozvrh - Hudební parodie"
     ├── repre.mp4       ← Video "Na ostří nože - parodie"
