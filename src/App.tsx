@@ -23,7 +23,7 @@ function App() {
       description: "Vtipná parodie na téma školního rozvrhu, která pobavila tisíce studentů a učitelů.",
       metrics: "500K+ přehrání • 15K sdílení",
       image: "https://images.pexels.com/photos/3756766/pexels-photo-3756766.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      videoUrl: "/videos/rozvrh.mp4",
+      videoUrl: "https://jendik.cz/videos/rozvrh.mp4",
       instagramUrl: null,
       type: "music"
     },
@@ -32,7 +32,7 @@ function App() {
       description: "Parodie na střevní potíže.",
       metrics: "200K+ zhlédnutí • 10K sdílení",
       image: "https://images.pexels.com/photos/1370295/pexels-photo-1370295.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      videoUrl: "/videos/repre.mp4",
+      videoUrl: "https://jendik.cz/videos/repre.mp4",
       type: "poetry"
     },
     {
@@ -40,7 +40,7 @@ function App() {
       description: "Realita",
       metrics: "200K+ zhlédnutí • 7K sdílení",
       image: "https://images.pexels.com/photos/1295572/pexels-photo-1295572.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      videoUrl: "/videos/pistace.mp4",
+      videoUrl: "https://jendik.cz/videos/pistace.mp4",
       type: "music"
     },
   ];
@@ -248,7 +248,7 @@ function App() {
               <div className="aspect-square rounded-2xl overflow-hidden border-4 border-gradient-to-r from-cyan-400 to-purple-400 p-1 max-w-md mx-auto">
                 <div className="w-full h-full rounded-xl overflow-hidden shadow-2xl">
                   <img 
-                    src="/IMG_3425.JPG"
+                    src="https://jendik.cz/IMG_3425.JPG"
                     alt="JENDIK Profile"
                     className="w-full h-full object-cover"
                   />
