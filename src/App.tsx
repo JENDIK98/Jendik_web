@@ -164,33 +164,33 @@ function App() {
           
           {/* Spotify Section - Under buttons */}
           <div className="mb-12 sm:mb-20 px-4">
-            <div className="max-w-2xl mx-auto">
+            <div className="max-w-lg mx-auto">
               <a
                 href="https://open.spotify.com/track/3fkC9HJqOfV3dZ8zbcROBP?si=156ca75fc85f4564"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative p-6 md:p-8 rounded-3xl bg-gradient-to-br from-slate-800/40 to-slate-900/60 border border-green-500/20 hover:border-green-400/40 transition-all duration-500 cursor-pointer overflow-hidden block shadow-xl hover:shadow-green-500/10"
+                className="group relative p-4 md:p-5 rounded-2xl bg-gradient-to-br from-slate-800/40 to-slate-900/60 border border-green-500/20 hover:border-green-400/40 transition-all duration-500 cursor-pointer overflow-hidden block shadow-xl hover:shadow-green-500/10"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-green-500 via-emerald-500 to-green-600 opacity-0 group-hover:opacity-15 transition-opacity duration-500"></div>
-                <div className="absolute top-4 right-4 opacity-20 group-hover:opacity-40 transition-opacity duration-300">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-green-400 to-emerald-500 blur-xl"></div>
+                <div className="absolute top-3 right-3 opacity-20 group-hover:opacity-40 transition-opacity duration-300">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-green-400 to-emerald-500 blur-xl"></div>
                 </div>
                 <div className="relative z-10">
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-4">
-                      <div className="p-4 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-500 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                        <Headphones className="text-white" size={28} />
+                    <div className="flex items-center gap-3">
+                      <div className="p-3 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                        <Headphones className="text-white" size={20} />
                       </div>
                       <div>
-                        <h3 className="text-2xl font-bold text-white mb-1">Spotify</h3>
-                        <p className="text-green-400 font-medium text-sm mb-1">🎵 Vzpomínám</p>
+                        <h3 className="text-lg font-bold text-white mb-1">Spotify</h3>
+                        <p className="text-green-400 font-medium text-xs mb-1">🎵 Vzpomínám</p>
                         <p className="text-white/70 text-xs">Můj nejnovější hit • Poslechni si teď!</p>
                       </div>
                     </div>
                     <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0">
-                      <div className="flex items-center gap-2 text-white/80">
-                        <span className="text-sm font-medium">▶ Přehrát</span>
-                        <ExternalLink size={18} />
+                      <div className="flex items-center gap-1 text-white/80">
+                        <span className="text-xs font-medium">▶ Přehrát</span>
+                        <ExternalLink size={14} />
                       </div>
                     </div>
                   </div>
