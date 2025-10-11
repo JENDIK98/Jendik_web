@@ -171,8 +171,7 @@ function App() {
                       </div>
                       <div>
                         <div className="flex items-start flex-col gap-1 mb-1">
-                          <h3 className="text-lg font-bold text-white">Spotify</h3>
-                          <p className="text-green-400 font-semibold text-base">🎵 Vzpomínám</p>
+                          <h3 className="text-lg font-bold text-white">Spotify - Vzpomínám</h3>
                         </div>
                         <p className="text-white/80 text-sm font-medium">Poslechni si teď!</p>
                       </div>
