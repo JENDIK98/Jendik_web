@@ -392,7 +392,7 @@ function App() {
               Pojďme tvořit
             </h2>
             <p className="text-lg md:text-xl text-white/80 font-light drop-shadow-lg">
-              Máš nápad na spolupráci? Ozvi se!
+              Máš zájem o spolupráci? Ozvi se!
             </p>
           </div>
           
