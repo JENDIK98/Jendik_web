@@ -459,11 +459,7 @@ function App() {
                 {socialStats.map((social, index) => (
                   <a
                     key={index}
-                    href={
-                      social.platform === 'Instagram' ? 'https://www.instagram.com/jendik_jendik/?hl=cs' :
-                      social.platform === 'YouTube' ? 'https://www.youtube.com/@jan_stanek_98' :
-                      social.platform === 'TikTok' ? 'https://www.tiktok.com/@jendik98' : '#'
-                    }
+                    href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`w-12 h-12 rounded-full bg-gradient-to-br ${social.gradient} flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-lg hover:shadow-xl`}
