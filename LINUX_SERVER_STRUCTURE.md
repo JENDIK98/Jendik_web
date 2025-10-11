@@ -7,14 +7,22 @@
 ├── index.html          ← Hlavní stránka (z dist/)
 ├── IMG_3425.JPG        ← Tvůj profilový obrázek
 ├── assets/             ← Složka se styly a skripty (z dist/)
-│   ├── index-[hash].js ← Hlavní JavaScript soubor (s hashem)
-│   ├── index-[hash].css← Hlavní CSS soubor (s hashem)
+│   ├── main.js         ← Hlavní JavaScript soubor
+│   ├── main.css        ← Hlavní CSS soubor
 │   └── další soubory   ← Případné další assets (fonty, obrázky)
 └── videos/             ← Složka s videi (vytvoříš ručně)
     ├── rozvrh.mp4      ← Video "Rozvrh - Hudební parodie"
     ├── repre.mp4       ← Video "Na ostří nože - parodie"
     └── pistace.mp4     ← Video "Pistácie - parodie"
 ```
+
+## 🔒 **DŮLEŽITÉ - HTTPS odkazy v kódu:**
+
+Aplikace teď používá **absolutní HTTPS odkazy**:
+- Videa: `https://jendik.cz/videos/nazev.mp4`
+- Obrázek: `https://jendik.cz/IMG_3425.JPG`
+
+**Pokud máš jinou doménu než `jendik.cz`, řekni mi ji a upravím odkazy!**
 
 ## 🔧 Linux příkazy pro vytvoření struktury
 
