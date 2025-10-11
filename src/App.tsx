@@ -320,7 +320,7 @@ function App() {
                   </div>
                   <div className="flex justify-center md:justify-start">
                     <a 
-                      href={item.instagramUrl || "https://www.instagram.com/jan_stanek_98/?hl=cs"}
+                      href={item.instagramUrl || "https://www.instagram.com/jendik_jendik/?hl=cs"}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="group bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-6 py-3 rounded-full font-bold transition-all duration-300 flex items-center gap-2 shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 backdrop-blur-sm border border-white/10"
@@ -352,7 +352,7 @@ function App() {
             {socialStats.map((social, index) => (
               <a
                 href={
-                  social.platform === 'Instagram' ? 'https://www.instagram.com/jan_stanek_98/?hl=cs' :
+                  social.platform === 'Instagram' ? 'https://www.instagram.com/jendik_jendik/?hl=cs' :
                   social.platform === 'YouTube' ? 'https://www.youtube.com/@jan_stanek_98' :
                   social.platform === 'TikTok' ? 'https://www.tiktok.com/@jendik98' : '#'
                 }
@@ -460,7 +460,7 @@ function App() {
                   <a
                     key={index}
                     href={
-                      social.platform === 'Instagram' ? 'https://www.instagram.com/jan_stanek_98/?hl=cs' :
+                      social.platform === 'Instagram' ? 'https://www.instagram.com/jendik_jendik/?hl=cs' :
                       social.platform === 'YouTube' ? 'https://www.youtube.com/@jan_stanek_98' :
                       social.platform === 'TikTok' ? 'https://www.tiktok.com/@jendik98' : '#'
                     }
