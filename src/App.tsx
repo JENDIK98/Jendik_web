@@ -182,11 +182,11 @@ function App() {
                         <Headphones className="text-white" size={28} />
                       </div>
                       <div>
-                        <div className="flex items-center gap-3 mb-1">
+                        <div className="flex items-start flex-col gap-1 mb-1">
                           <h3 className="text-lg font-bold text-white">Spotify</h3>
                           <p className="text-green-400 font-semibold text-base">🎵 Vzpomínám</p>
                         </div>
-                        <p className="text-white/80 text-sm font-medium">Můj nejnovější hit • Poslechni si teď!</p>
+                        <p className="text-white/80 text-sm font-medium">Poslechni si teď!</p>
                       </div>
                     </div>
                     <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-3 group-hover:translate-x-0">
