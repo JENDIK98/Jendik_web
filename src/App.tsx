@@ -163,9 +163,6 @@ function App() {
                 className="group relative p-3 md:p-4 rounded-2xl bg-gradient-to-br from-slate-800/40 to-slate-900/60 border border-green-500/20 hover:border-green-400/40 transition-all duration-500 cursor-pointer overflow-hidden block"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-green-500 via-emerald-500 to-green-600 opacity-0 group-hover:opacity-15 transition-opacity duration-500"></div>
-                <div className="absolute top-4 right-4 opacity-20 group-hover:opacity-40 transition-opacity duration-300">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-green-400 to-emerald-500 blur-xl"></div>
-                </div>
                 <div className="relative z-10">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
