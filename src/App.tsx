@@ -107,15 +107,6 @@ function App() {
       {/* Stats Section - Moved to top for collaboration importance */}
       {/* Hero Section - Futuristic Style */}
       <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-pink-500/15 rounded-full blur-3xl animate-pulse delay-2000"></div>
-          <div className="absolute top-10 right-20 w-48 h-48 bg-blue-500/15 rounded-full blur-2xl animate-pulse delay-500"></div>
-          <div className="absolute bottom-10 left-20 w-64 h-64 bg-green-500/10 rounded-full blur-2xl animate-pulse delay-1500"></div>
-        </div>
-
         <div className="max-w-6xl mx-auto px-6 text-center relative z-10 backdrop-blur-sm">
           {/* JENDIK Title - Desktop Only */}
           <div className="hidden md:flex items-center justify-center gap-4 mb-8">
@@ -223,10 +214,6 @@ function App() {
       {/* About Section - Futuristic Style */}
       <section id="about" className="py-24 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/70 to-purple-900/70 backdrop-blur-sm"></div>
-        <div className="absolute inset-0">
-          <div className="absolute top-10 left-20 w-64 h-64 bg-cyan-500/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
-          <div className="absolute bottom-20 right-20 w-80 h-80 bg-purple-500/10 rounded-full blur-2xl animate-pulse delay-2000"></div>
-        </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
             <div>
@@ -278,10 +265,6 @@ function App() {
 
       {/* Portfolio Section - Futuristic Style */}
       <section id="portfolio" className="py-24 relative">
-        <div className="absolute inset-0">
-          <div className="absolute top-20 right-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-10 left-10 w-64 h-64 bg-cyan-500/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
-        </div>
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-6 drop-shadow-2xl">
@@ -359,10 +342,6 @@ function App() {
 
       {/* Social Media Section - Futuristic Style */}
       <section className="py-24 relative">
-        <div className="absolute inset-0">
-          <div className="absolute top-10 left-1/4 w-48 h-48 bg-pink-500/10 rounded-full blur-2xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
-        </div>
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-6 drop-shadow-2xl">
@@ -410,10 +389,6 @@ function App() {
 
       {/* Contact Section - Futuristic Style */}
       <section id="contact" className="py-24 relative">
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-10 right-10 w-72 h-72 bg-purple-500/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
-        </div>
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-20">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-6 drop-shadow-2xl">
